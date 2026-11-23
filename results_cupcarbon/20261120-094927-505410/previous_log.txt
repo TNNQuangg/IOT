@@ -1,0 +1,52 @@
+CUPCARBON KLAINES | batch 20261120-091825-369653
+Requested active duration per scenario: 600 wall-clock s
+Engine pacing: 450 ms per simulated s (nominal). Use the measured simulated horizon in each result.
+Model: CupCarbon engine + existing SenScript project, legacy packet loss, no ACK, MAC disabled, pre-announced bypass disabled.
+One run per scenario. No controlled seed, confidence interval or V3 PHY/energy claim.
+Detailed logs: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653
+cupcarbon.jar SHA-256: 1eccbf29827ad321a380f9472e6bccee05d1a71a86cb0f24947d7f31546a0a27
+
+KB-0 | Troi quang | START 2026-11-20T09:18:27
+Engine log: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653\KB-0\cupcarbon.log
+Active runtime: 600.038 wall-clock s | simulated horizon: 1015.643 s
+PDR 96.69% (350/362)
+Mean latency from GEN: 15.922 simulated s (received packets only)
+  S1: 35/35 (100.00%)
+  S2: 35/35 (100.00%)
+  S3: 35/36 (97.22%)
+  S4: 35/36 (97.22%)
+  S5: 35/36 (97.22%)
+  S6: 35/36 (97.22%)
+  S7: 35/37 (94.59%)
+  S8: 35/37 (94.59%)
+  S9: 35/37 (94.59%)
+  S10: 35/37 (94.59%)
+Events: GEN=362, GW=350
+
+KB-1 | Mua 12% | START 2026-11-20T09:28:30
+Engine log: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653\KB-1\cupcarbon.log
+Active runtime: 600.017 wall-clock s | simulated horizon: 1115.103 s
+PDR 91.55% (390/426)
+Mean latency from GEN: 33.394 simulated s (received packets only)
+  S1: 38/38 (100.00%)
+  S2: 37/38 (97.37%)
+  S3: 37/38 (97.37%)
+  S4: 45/47 (95.74%)
+  S5: 46/47 (97.87%)
+  S6: 46/48 (95.83%)
+  S7: 46/49 (93.88%)
+  S8: 31/40 (77.50%)
+  S9: 33/40 (82.50%)
+  S10: 31/41 (75.61%)
+Events: GEN=426, GW=390, DROP=74
+
+KB-2 | Mua 25% | START 2026-11-20T09:38:32
+Engine log: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653\KB-2\cupcarbon.log
+ERROR: Command '['C:\\Program Files\\Java\\jdk-24\\bin\\java.exe', '-Dfile.encoding=UTF-8', '-Djava.io.tmpdir=.', '-Duser.home=.', '-cp', 'C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\cupcarbon_runtime\\cupcarbon.jar;C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\results_cupcarbon\\20261120-091825-369653\\classes', 'CupCarbonBatch', 'C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\results_cupcarbon\\20261120-091825-369653\\KB-2\\landslide_lora', '600', '450']' returned non-zero exit status 1.. See C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653\KB-2\cupcarbon.log
+
+KB-3 | Sat lo cham | START 2026-11-20T09:38:50
+Engine log: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653\KB-3\cupcarbon.log
+ERROR: Command '['C:\\Program Files\\Java\\jdk-24\\bin\\java.exe', '-Dfile.encoding=UTF-8', '-Djava.io.tmpdir=.', '-Duser.home=.', '-cp', 'C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\cupcarbon_runtime\\cupcarbon.jar;C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\results_cupcarbon\\20261120-091825-369653\\classes', 'CupCarbonBatch', 'C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\results_cupcarbon\\20261120-091825-369653\\KB-3\\landslide_lora', '600', '450']' returned non-zero exit status 1.. See C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653\KB-3\cupcarbon.log
+
+KB-4 | Sat lo nhanh | START 2026-11-20T09:42:39
+Engine log: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-091825-369653\KB-4\cupcarbon.log

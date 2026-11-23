@@ -1,0 +1,1 @@
+Guarded 2 pacing calls with Math.max(delay, 0).

@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hệ Thống Giám Sát & Cảnh Báo Sạt Lở Đất</title>
+<style>
+:root {
+    --bg-dark: #0b1120;
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --safe: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-dark);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding: 24px;
+    padding-bottom: 100px;
+}
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 24px 30px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.header-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.badge {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    background: #1e293b;
+    border: 1px solid var(--card-border);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge.online {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: currentColor;
+    display: inline-block;
+}
+
+/* Tabs Navigation */
+.tabs-nav {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 14px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-muted);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tab-btn:hover {
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+    color: #fff;
+    background: var(--primary);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   TAB 1: EXPANDED TOPOLOGY
+   ========================================== */
+.topo-wrapper {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.topo-instructions {
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    background: rgba(59, 130, 246, 0.12);
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+    font-size: 14px;
+    color: #93c5fd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.demo-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.demo-btn {
+    background: #334155;
+    border: 1px solid #475569;
+    color: #f1f5f9;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.demo-btn:hover {
+    background: #475569;
+}
+
+.demo-btn.active-quake {
+    background: #dc2626;
+    border-color: #ef4444;
+    color: white;
+    animation: pulseRed 0.8s infinite alternate;
+}
+
+/* Network Chain Graph */
+.topology-chain {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px 10px 45px;
+    width: 100%;
+    gap: 12px;
+    position: relative;
+    overflow-x: auto;
+}
+
+.node-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    transition: transform 0.25s ease;
+    min-width: 200px;
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+.node-item:hover, .node-item.selected-node {
+    transform: translateY(-8px);
+}
+
+.node-circle-wrap {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.node-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #0f172a;
+    border: 5px solid var(--safe);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.node-item.selected-node .node-circle {
+    outline: 3px dashed #60a5fa;
+    outline-offset: 6px;
+}
+
+.node-icon {
+    font-size: 38px;
+}
+
+.node-pct {
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: 4px;
+}
+
+/* Quick stats card directly below each node */
+.node-quick-card {
+    background: #0f172a;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+.node-item:hover .node-quick-card, .node-item.selected-node .node-quick-card {
+    border-color: #60a5fa;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
+}
+
+.node-quick-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 4px;
+}
+
+.node-quick-ip {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+.node-quick-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.metric-pill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 8px;
+    background: #1e293b;
+    border-radius: 6px;
+}
+
+.metric-pill span {
+    color: var(--text-muted);
+}
+
+/* Connecting link */
+.node-link {
+    flex-grow: 1;
+    min-width: 28px;
+    max-width: 120px;
+    height: 6px;
+    background: linear-gradient(90deg, #334155 0%, #64748b 50%, #334155 100%);
+    position: relative;
+    margin-top: 57px;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.node-link::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #60a5fa;
+    top: -5px;
+    left: 0;
+    animation: flowData 2s infinite linear;
+    box-shadow: 0 0 12px #60a5fa;
+}
+
+@keyframes flowData {
+    0% { left: 5%; opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { left: 95%; opacity: 0; }
+}
+
+@keyframes pulseRed {
+    0% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+    100% { box-shadow: 0 0 45px rgba(239, 68, 68, 1); }
+}
+
+/* ==========================================
+   LIVE TELEMETRY INSPECTOR PANEL (TAB 1)
+   ========================================== */
+.inspector-panel {
+    margin-top: 35px;
+    background: #0f172a;
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.inspector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+}
+
+.inspector-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.inspector-title h3 {
+    font-size: 18px;
+    color: #60a5fa;
+    font-weight: 700;
+}
+
+.inspector-title span {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.inspector-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.telemetry-card {
+    background: #1e293b;
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 18px;
+    transition: transform 0.2s;
+}
+
+.telemetry-card h4 {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.telemetry-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.telemetry-val .unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.telemetry-sub {
+    font-size: 12px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.telemetry-sub-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.risk-bar-container {
+    width: 100%;
+    height: 10px;
+    background: #334155;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.risk-bar-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* ==========================================
+   TAB 2: NODE LIST TABLE
+   ========================================== */
+.table-container {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    overflow-x: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 1280px;
+}
+
+th, td {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+th {
+    background: #172554;
+    color: #93c5fd;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.node-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.node-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.tag-master {
+    background: #1e3a8a;
+    color: #93c5fd;
+}
+
+.tag-child {
+    background: #334155;
+    color: #cbd5e1;
+}
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.btn-action {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: #ef4444;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.btn-action:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.calibration-cell { min-width: 230px; }
+.calibration-status { font-size: 12px; line-height: 1.5; margin-bottom: 8px; color: #cbd5e1; }
+.btn-calibrate {
+    background: #1d4ed8; border: 1px solid #3b82f6; color: #fff;
+    padding: 7px 10px; border-radius: 8px; cursor: pointer;
+    font-size: 12px; font-weight: 600; white-space: nowrap;
+}
+.btn-calibrate:hover { background: #2563eb; }
+.btn-calibrate:disabled { opacity: .45; cursor: not-allowed; }
+
+/* Floating Action Button (+) */
+.fab-btn {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 6px 25px rgba(37, 99, 235, 0.55);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+}
+
+.fab-btn:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.75);
+}
+
+/* Modal Add Node */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    width: 90%;
+    max-width: 500px;
+    padding: 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: scale(1);
+}
+
+.modal-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: #0f172a;
+    border: 1px solid var(--card-border);
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.btn-secondary {
+    background: #334155;
+    border: none;
+    color: #cbd5e1;
+    padding: 11px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    color: #fff;
+    padding: 11px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+@media (max-width: 1080px) {
+    .topology-chain { flex-direction: column; align-items: center; }
+    .node-link {
+        flex: none;
+        width: 6px;
+        min-width: 0;
+        height: 24px;
+        margin-top: 0;
+        background: #64748b;
+    }
+    .node-link::after { display: none; }
+}
+</style>
+<style>
+.offline-demo { padding: 12px 16px; margin: 0 0 16px; background: #172a45; border: 1px solid #41649a; border-radius: 10px; font-size: 14px; }
+.offline-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 9px; }
+.offline-actions select { background: #0f172a; color: #f8fafc; border: 1px solid #64748b; border-radius: 8px; padding: 8px; font: inherit; }
+.offline-actions [aria-pressed="true"] { background: #1d4ed8; }
+.offline-demo button:focus-visible, .offline-demo select:focus-visible { outline: 2px solid #bfdbfe; outline-offset: 2px; }
+.fab-btn { display: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <div>
+            <h1>📡 MẠNG NODE GIÁM SÁT SẠT LỞ ĐẤT</h1>
+            <p>Hệ thống giám sát đa cảm biến & cảnh báo sớm nguy cơ sạt lở đất</p>
+        </div>
+        <div class="header-badges">
+            <div class="badge online">
+                <span class="dot"></span>
+                <span id="headerStatus">ESP32 Đang Hoạt Động</span>
+            </div>
+            <div class="badge">
+                <span>WiFi:</span>
+                <strong id="headerSSID">--</strong>
+            </div>
+            <div class="badge">
+                <span>IP:</span>
+                <strong id="headerIP">--</strong>
+            </div>
+        </div>
+    </header>
+
+    <section class="offline-demo" aria-label="Điều khiển bản xem thử">
+        <div><strong>Demo offline</strong> · Số đo Node 1–2 được cấp bởi bộ giả lập ESP32.</div>
+        <div class="offline-actions">
+            <label for="demoTarget">Tác động vào</label>
+            <select id="demoTarget" onchange="showDemoState()">
+                <option value="0">Node 1 · Miếng A</option>
+                <option value="1">Node 2 · Miếng B</option>
+            </select>
+            <button class="demo-btn" id="demoTilt" onclick="setDemoInput('tilt')" aria-pressed="false">Nghiêng miếng</button>
+            <button class="demo-btn" id="demoWet" onclick="setDemoInput('wet')" aria-pressed="false">Nhỏ nước vào mút</button>
+            <button class="demo-btn" onclick="setDemoInput('vibrate')">Gõ nhẹ</button>
+            <button class="demo-btn" onclick="setDemoInput('reset')">Đặt lại node</button>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab('tab-topology')">
+            🕸️ Tab 1: Sơ đồ mạng Topology
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-nodes')">
+            📋 Tab 2: Danh sách & Hiệu chuẩn Node
+        </button>
+    </div>
+
+    <!-- TAB 1: TOPOLOGY -->
+    <div id="tab-topology" class="tab-content active">
+        <div class="topo-wrapper">
+            <div class="topo-instructions">
+                <div>
+                    💡 <strong>Hướng dẫn:</strong> Rê chuột hoặc bấm vào từng Node để xem đầy đủ thông số tức thời ở bảng bên dưới. Màu sắc thể hiện <strong>điểm nguy cơ sạt lở tổng hợp</strong> từ độ ẩm, độ nghiêng và rung động.
+                    Node 1 và 2 lấy số đo qua cùng ESP32. Các đường nối minh họa sơ đồ mạng.
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-btn" id="btnSim3" onclick="toggleDemoQuake(2)">Thử rung Node 3</button>
+                    <button class="demo-btn" id="btnSim4" onclick="toggleDemoQuake(3)">Thử rung Node 4</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Node Chain -->
+            <div class="topology-chain" id="topologyContainer">
+                <!-- Javascript will render nodes and links here -->
+            </div>
+
+            <!-- Prominent Live Telemetry Panel for the selected / hovered node -->
+            <div class="inspector-panel" id="inspectorPanel">
+                <div class="inspector-header">
+                    <div class="inspector-title">
+                        <h3>📊 BẢNG THEO DÕI THÔNG SỐ TỨC THỜI</h3>
+                        <span id="inspNodeLabel">Node 1 (ESP32 Thật)</span>
+                    </div>
+                    <div class="badge" id="inspStatusBadge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
+                        <span class="dot"></span>
+                        <span id="inspStatusText">Bình thường</span>
+                    </div>
+                </div>
+
+                <div class="inspector-grid">
+                    <!-- Độ ẩm đất -->
+                    <div class="telemetry-card">
+                        <h4>🌱 Độ ẩm đất</h4>
+                        <div class="telemetry-val">
+                            <span id="inspSoilPct">--</span>
+                            <span class="unit">%</span>
+                        </div>
+                        <div class="telemetry-sub">
+                            <div class="telemetry-sub-row">
+                                <span>Giá trị ADC:</span>
+                                <strong id="inspSoilRaw">--</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Đánh giá:</span>
+                                <strong id="inspSoilStatus">--</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Xu hướng (điểm %/phút):</span>
+                                <strong id="inspSoilTrend">--</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cảm biến rung SW-420 -->
+                    <div class="telemetry-card">
+                        <h4>📳 Rung SW-420</h4>
+                        <div class="telemetry-val" id="inspVibVal" style="font-size:22px; color:#34d399;">
+                            ỔN ĐỊNH
+                        </div>
+                        <div class="telemetry-sub">
+                            <div class="telemetry-sub-row">
+                                <span>Xung rung:</span>
+                                <strong id="inspVibStatus">Không phát hiện</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Giữ cảnh báo:</span>
+                                <strong>3 giây sau xung cuối</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MPU-6050 Gia tốc -->
+                    <div class="telemetry-card">
+                        <h4>📐 Gia tốc MPU-6050</h4>
+                        <div class="telemetry-val" id="inspAccMagnitude" style="font-size:24px;">
+                            9.8 <span class="unit">m/s²</span>
+                        </div>
+                        <div class="telemetry-sub">
+                            <div class="telemetry-sub-row">
+                                <span>Trục X:</span>
+                                <strong id="inspAx">0.00</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Trục Y:</span>
+                                <strong id="inspAy">0.00</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Trục Z:</span>
+                                <strong id="inspAz">9.80</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MPU-6050 Góc & Con quay -->
+                    <div class="telemetry-card">
+                        <h4>🔄 Góc nghiêng & Vận tốc góc</h4>
+                        <div class="telemetry-val" style="font-size:20px;">
+                            <span id="inspRoll">0.0</span>° / <span id="inspPitch">0.0</span>°
+                        </div>
+                        <div class="telemetry-sub">
+                            <div class="telemetry-sub-row">
+                                <span>Roll (Xoay X):</span>
+                                <strong id="inspRollSub">0.0°</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Pitch (Nghiêng Y):</span>
+                                <strong id="inspPitchSub">0.0°</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Con quay (gx, gy, gz):</span>
+                                <strong id="inspGyro">0, 0, 0</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mức độ nguy cơ sạt lở đất -->
+                    <div class="telemetry-card">
+                        <h4>🚨 Nguy cơ sạt lở đất</h4>
+                        <div class="telemetry-val" id="inspSeismicPct" style="color: #10b981;">
+                            0 <span class="unit">%</span>
+                        </div>
+                        <div class="telemetry-sub">
+                            <div class="telemetry-sub-row">
+                                <span>Trạng thái:</span>
+                                <strong id="inspSeismicText" style="color: #10b981;">Bình thường</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Độ lệch so với góc gốc:</span>
+                                <strong id="inspTiltDelta">Chưa hiệu chuẩn</strong>
+                            </div>
+                            <div class="telemetry-sub-row">
+                                <span>Độ ẩm nguy cơ cao:</span>
+                                <strong id="inspMoistureDanger">Chưa kích hoạt</strong>
+                            </div>
+                            <div class="risk-bar-container">
+                                <div class="risk-bar-fill" id="inspSeismicBar" style="width: 0%; background-color: #10b981;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TAB 2: NODE LIST -->
+    <div id="tab-nodes" class="tab-content">
+        <div class="topo-instructions" style="margin-bottom:16px;">
+            <strong>Quy trình góc gốc:</strong> Nạp firmware này cho từng ESP32, kết nối tất cả vào cùng Wi-Fi, thêm IP Node tại nút +. Sau khi cắm và cố định Node vào đất, để cảm biến đứng yên rồi nhấn <strong>Chốt góc gốc (8 giây)</strong>. Không di chuyển Node trong lúc lấy mẫu.
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Node</th>
+                        <th>IP / Endpoint</th>
+                        <th>WiFi SSID</th>
+                        <th>Độ ẩm đất</th>
+                        <th>Rung (SW-420)</th>
+                        <th>Gia tốc / Góc</th>
+                        <th>Hiệu chuẩn góc gốc</th>
+                        <th>Nguy cơ sạt lở</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id="nodeTableBody">
+                    <!-- Javascript will render rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+<!-- Floating Action Button (+) bottom left -->
+<button class="fab-btn" onclick="openAddNodeModal()" title="Thêm Node Mới">+</button>
+
+<!-- Modal Add Node -->
+<div class="modal-overlay" id="addNodeModal">
+    <div class="modal-card">
+        <h3>➕ Thêm Node Mới</h3>
+        <p>Nhập IP của ESP32 phụ đã nạp cùng firmware và kết nối vào cùng mạng Wi-Fi. Sau khi cố định node xuống đất, bạn sẽ chốt góc gốc trong bảng Tab 2.</p>
+
+        <form id="addNodeForm" onsubmit="saveNewNode(event)">
+            <div class="form-group">
+                <label>Tên / Mã Node (*)</label>
+                <input type="text" id="newNodeName" placeholder="Ví dụ: Node 4 - Cảm biến khu vực D" required>
+            </div>
+            <div class="form-group">
+                <label>Địa chỉ IP hoặc Hostname (*)</label>
+                <input type="text" id="newNodeIP" placeholder="Ví dụ: 192.168.1.104" required>
+            </div>
+            <div class="form-group">
+                <label>SSID (tham chiếu, không cấu hình Wi-Fi từ trình duyệt)</label>
+                <input type="text" id="newNodeSSID" value="" placeholder="Ví dụ: iPhone hoặc Wi-Fi hiện tại">
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn-secondary" onclick="closeAddNodeModal()">Hủy</button>
+                <button type="submit" class="btn-primary">Thêm Node & Kết nối</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+const mockNodes = [33, 46].map((soil, i) => ({
+    nodeId: 'node-' + (i + 1), soil, wetSince: null, tiltSince: null,
+    vibrationUntil: 0, baseline: 0, calibrationStarted: null, calibrated: false,
+}));
+const selectedDemoNode = () => Number(document.getElementById('demoTarget').value);
+const showDemoState = () => {
+    const node = mockNodes[selectedDemoNode()];
+    document.getElementById('demoTilt').setAttribute('aria-pressed', String(node.tiltSince !== null));
+    document.getElementById('demoWet').setAttribute('aria-pressed', String(node.wetSince !== null));
+};
+function setDemoInput(input) {
+    const index = selectedDemoNode();
+    const node = mockNodes[index];
+    const now = Date.now();
+    if (input === 'tilt') node.tiltSince = node.tiltSince === null ? now : null;
+    if (input === 'wet') node.wetSince = node.wetSince === null ? now : null;
+    if (input === 'vibrate') node.vibrationUntil = now + 3000;
+    if (input === 'reset') {
+        node.tiltSince = null;
+        node.wetSince = null;
+        node.vibrationUntil = 0;
+        node.calibrationStarted = null;
+        node.calibrated = false;
+        node.baseline = 0;
+    }
+    showDemoState();
+    selectNode(index);
+    fetchAllNodeData();
+}
+function demoSnapshot(node, now) {
+    const roll = node.tiltSince === null ? 0 : 18;
+    let calibrationProgress = node.calibrated ? 100 : 0;
+    if (node.calibrationStarted !== null) {
+        calibrationProgress = Math.min(100, (now - node.calibrationStarted) / 80);
+        if (calibrationProgress === 100) {
+            node.baseline = roll;
+            node.calibrated = true;
+            node.calibrationStarted = null;
+        }
+    }
+    const calibrationState = node.calibrationStarted !== null ? 1 : node.calibrated ? 2 : 0;
+    const wetSeconds = node.wetSince === null ? 0 : (now - node.wetSince) / 1000;
+    const soilPercent = Math.round(node.soil + (97 - node.soil) * Math.min(wetSeconds / 2, 1));
+    const secondsUntil90 = 2 * (90 - node.soil) / (97 - node.soil);
+    const moistureConfirmProgress = Math.min(100, Math.max(0, (wetSeconds - secondsUntil90) * 20));
+    const moistureDanger = moistureConfirmProgress >= 100;
+    const vibration = now < node.vibrationUntil;
+    const tiltDelta = node.calibrated ? Math.abs(roll - node.baseline) : 0;
+    const tiltScore = tiltDelta >= 10 && (node.tiltSince === null || now - node.tiltSince >= 1000) ? 100 : 0;
+    const riskScore = Math.max(0.48 * soilPercent + 0.30 * tiltScore + (vibration ? 10 : 0),
+        moistureDanger ? 80 : 0, tiltScore > 0 ? 75 : 0);
+    return {
+        nodeId: node.nodeId, ip: 'Demo offline', ssid: 'ESP32 mô phỏng', mpuOK: true,
+        soilPercent, soilRaw: 3000 - 20 * soilPercent,
+        roll, pitch: 0, ax: 0, ay: 9.81 * Math.sin(roll * Math.PI / 180),
+        az: 9.81 * Math.cos(roll * Math.PI / 180),
+        vibration, tiltDelta, tiltScore, baselineRoll: node.baseline, baselinePitch: 0,
+        calibrated: node.calibrated, calibrationState, calibrationProgress,
+        moistureConfirmProgress, moistureDanger, riskScore,
+    };
+}
+const demoResponse = (status, data) => new Response(JSON.stringify(data), {
+    status, headers: {'Content-Type': 'application/json'}
+});
+async function demoFetch(url, options = {}) {
+    const endpoint = new URL(url, 'http://esp32-demo.local');
+    const now = Date.now();
+    if (endpoint.pathname === '/data/all') {
+        return demoResponse(200, {nodes: mockNodes.map(node => demoSnapshot(node, now))});
+    }
+    const node = mockNodes.find(item => item.nodeId === endpoint.searchParams.get('node'));
+    if (endpoint.pathname === '/calibrate' && options.method === 'POST' && node) {
+        if (node.calibrationStarted !== null) return demoResponse(409, {message: 'Node đang hiệu chuẩn.'});
+        node.calibrationStarted = now;
+        return demoResponse(202, demoSnapshot(node, now));
+    }
+    return demoResponse(404, {message: 'Endpoint chỉ khả dụng khi kết nối ESP32.'});
+}
+</script>
+
+<script>
+// ==========================================
+// CLIENT STATE & NODE MANAGEMENT
+// ==========================================
+
+const EMPTY_NODE_DATA = {
+    soilPercent: 0, soilRaw: 0, soilTrendPerMinute: 0, soilTrendScore: 0, vibration: false, mpuOK: false,
+    ax: 0, ay: 0, az: 9.8, gx: 0, gy: 0, gz: 0,
+    roll: 0, pitch: 0, tiltDelta: 0, tiltScore: 0,
+    calibrated: false, calibrationState: 0, calibrationProgress: 0,
+    baselineRoll: 0, baselinePitch: 0, moistureDanger: false,
+    moistureConfirmProgress: 0, seismicScore: 0
+};
+
+const DEFAULT_NODES = [
+    {
+        id: "node-1", name: "Node 1 (Miếng A)", isLocal: true,
+        isSimulated: false, isOnline: false,
+        ip: window.location.hostname, ssid: "", data: { ...EMPTY_NODE_DATA }
+    },
+    {
+        id: "node-2", name: "Node 2 (Miếng B)", isLocal: true,
+        isSimulated: false, isOnline: false,
+        ip: window.location.hostname, ssid: "", data: { ...EMPTY_NODE_DATA }
+    },
+    {
+        id: "node-3", name: "Node 3",
+        isSimulated: true, isOnline: true, ip: "", ssid: "",
+        demoQuake: false,
+        data: {
+            soilPercent: 42.5, soilRaw: 2150, soilTrendPerMinute: 0, soilTrendScore: 0, vibration: false, mpuOK: true,
+            ax: 0.05, ay: 0.12, az: 9.81, gx: 0.1, gy: -0.2, gz: 0,
+            roll: 0.7, pitch: -0.3, tiltDelta: 0, tiltScore: 0,
+            calibrated: false, calibrationState: 0, calibrationProgress: 0,
+            baselineRoll: 0, baselinePitch: 0, moistureDanger: false,
+            moistureConfirmProgress: 0, seismicScore: 26
+        }
+    },
+    {
+        id: "node-4", name: "Node 4",
+        isSimulated: true, isOnline: true, ip: "", ssid: "",
+        demoQuake: false,
+        data: {
+            soilPercent: 68, soilRaw: 1640, soilTrendPerMinute: 0, soilTrendScore: 0, vibration: false, mpuOK: true,
+            ax: -0.08, ay: 0.02, az: 9.79, gx: 0, gy: 0.1, gz: -0.1,
+            roll: -0.5, pitch: 0.4, tiltDelta: 0, tiltScore: 0,
+            calibrated: false, calibrationState: 0, calibrationProgress: 0,
+            baselineRoll: 0, baselinePitch: 0, moistureDanger: false,
+            moistureConfirmProgress: 0, seismicScore: 41
+        }
+    }
+];
+
+const EXTRA_NODES_STORAGE_KEY = 'esp32_dashboard_offline_demo';
+
+let nodesList = [];
+let activeNodeIndex = 0;
+let nodePollBusy = false;
+
+function loadNodes() {
+    nodesList = JSON.parse(JSON.stringify(DEFAULT_NODES));
+    try {
+        const saved = JSON.parse(localStorage.getItem(EXTRA_NODES_STORAGE_KEY));
+        if (Array.isArray(saved)) {
+            for (const { id, name, ip, ssid } of saved) {
+                nodesList.push({
+                    id, name, ip, ssid, isLocal: false, isSimulated: false,
+                    isOnline: false, data: { ...EMPTY_NODE_DATA }
+                });
+            }
+        }
+    } catch (err) {
+        console.warn('Không đọc được danh sách node bổ sung:', err);
+    }
+}
+
+function persistNodes() {
+    const extraNodes = nodesList.slice(DEFAULT_NODES.length);
+    localStorage.setItem(EXTRA_NODES_STORAGE_KEY, JSON.stringify(
+        extraNodes.map(({ id, name, ip, ssid }) => ({ id, name, ip, ssid }))
+    ));
+}
+
+function nodeSourceLabel(node) {
+    if (node.isSimulated) return 'Mô phỏng';
+    return node.isLocal ? 'Cảm biến thật' : 'Node phụ';
+}
+
+function getRiskColor(score) {
+    if (score < 25) return "#10b981";
+    if (score < 50) return "#eab308";
+    if (score < 75) return "#f97316";
+    return "#ef4444";
+}
+
+function getRiskStatusText(score) {
+    if (score < 25) return "Bình thường";
+    if (score < 50) return "Theo dõi";
+    if (score < 75) return "Cảnh báo";
+    return "NGUY CƠ CAO";
+}
+
+function nodeBaseUrl(node) {
+    if (node.isLocal) return '';
+    let host = (node.ip || '').trim();
+    if (!/^https?:\/\//i.test(host)) host = 'http://' + host;
+    return host.replace(/\/$/, '');
+}
+
+function switchTab(tabId) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-btn')[tabId === 'tab-topology' ? 0 : 1].classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
+
+function selectNode(index) {
+    activeNodeIndex = index;
+    document.querySelectorAll('.node-item').forEach((el, idx) => {
+        el.classList.toggle('selected-node', idx === index);
+    });
+    renderInspector();
+}
+
+function renderTopology() {
+    const container = document.getElementById('topologyContainer');
+    container.innerHTML = '';
+
+    nodesList.forEach((node, index) => {
+        const score = Number(node.data.seismicScore || 0);
+        const color = getRiskColor(score);
+        const isAlert = score >= 75;
+        const isSelected = index === activeNodeIndex;
+        const nodeItem = document.createElement('div');
+        nodeItem.className = 'node-item' + (isSelected ? ' selected-node' : '');
+        nodeItem.onmouseenter = () => selectNode(index);
+        nodeItem.onclick = () => selectNode(index);
+        nodeItem.innerHTML = `
+            <div class="node-circle-wrap">
+                <div class="node-circle" style="border-color:${color};box-shadow:0 0 ${isAlert ? '35px' : '20px'} ${color};${isAlert ? 'animation:pulseRed 0.8s infinite alternate;' : ''}">
+                    <div class="node-icon">${isAlert ? '🚨' : '📡'}</div>
+                    <div class="node-pct" style="color:${color};">${score.toFixed(0)}%</div>
+                </div>
+            </div>
+            <div class="node-quick-card">
+                <div class="node-quick-name">${node.name}</div>
+                <div class="node-quick-ip">${nodeSourceLabel(node)}</div>
+                <div class="node-quick-metrics">
+                    <div class="metric-pill"><span>Độ ẩm đất:</span><strong>${Number(node.data.soilPercent).toFixed(1)}%</strong></div>
+                    <div class="metric-pill"><span>Rung SW-420:</span><strong style="color:${node.data.vibration ? '#ef4444' : '#34d399'};">${node.data.vibration ? 'CÓ RUNG' : 'ỔN ĐỊNH'}</strong></div>
+                    <div class="metric-pill"><span>Nguy cơ sạt lở:</span><strong style="color:${color};font-weight:700;">${score.toFixed(0)}%</strong></div>
+                    <div class="metric-pill"><span>Kết nối:</span><strong style="color:${node.isOnline ? '#34d399' : '#ef4444'};">${node.isOnline ? 'ONLINE' : 'OFFLINE'}</strong></div>
+                </div>
+            </div>`;
+        container.appendChild(nodeItem);
+
+        if (index < nodesList.length - 1) {
+            const link = document.createElement('div');
+            link.className = 'node-link';
+            container.appendChild(link);
+        }
+    });
+    renderInspector();
+}
+
+function renderInspector() {
+    if (!nodesList[activeNodeIndex]) activeNodeIndex = 0;
+    const node = nodesList[activeNodeIndex];
+    if (!node) return;
+    const d = node.data;
+    const score = Number(d.seismicScore || 0);
+    const color = getRiskColor(score);
+    const statusText = getRiskStatusText(score);
+
+    document.getElementById('inspNodeLabel').textContent = `${node.name} · ${nodeSourceLabel(node)}`;
+    const badge = document.getElementById('inspStatusBadge');
+    badge.style.background = `rgba(${score >= 75 ? '239,68,68' : score >= 50 ? '249,115,22' : score >= 25 ? '234,179,8' : '16,185,129'},0.2)`;
+    badge.style.color = color;
+    badge.style.borderColor = color;
+    document.getElementById('inspStatusText').textContent = node.isOnline ? statusText : 'Mất kết nối';
+
+    document.getElementById('inspSoilPct').textContent = Number(d.soilPercent).toFixed(1);
+    document.getElementById('inspSoilRaw').textContent = d.soilRaw;
+    document.getElementById('inspSoilStatus').textContent = d.moistureDanger ? 'Nguy cơ cao – ≥90% trong 5 giây' : (d.soilPercent >= 60 ? 'Đất ẩm' : (d.soilPercent >= 30 ? 'Trung bình' : 'Đất khô'));
+    document.getElementById('inspSoilTrend').textContent = `${Number(d.soilTrendPerMinute || 0).toFixed(2)} điểm %/phút`;
+
+    const vibVal = document.getElementById('inspVibVal');
+    if (d.vibration) {
+        vibVal.textContent = 'PHÁT HIỆN RUNG!';
+        vibVal.style.color = '#ef4444';
+        document.getElementById('inspVibStatus').textContent = 'Có xung trong 3 giây gần nhất';
+    } else {
+        vibVal.textContent = 'ỔN ĐỊNH';
+        vibVal.style.color = '#34d399';
+        document.getElementById('inspVibStatus').textContent = 'Không phát hiện';
+    }
+
+    const accMag = Math.sqrt(d.ax * d.ax + d.ay * d.ay + d.az * d.az);
+    document.getElementById('inspAccMagnitude').innerHTML = `${accMag.toFixed(2)} <span class="unit">m/s²</span>`;
+    document.getElementById('inspAx').textContent = Number(d.ax).toFixed(2);
+    document.getElementById('inspAy').textContent = Number(d.ay).toFixed(2);
+    document.getElementById('inspAz').textContent = Number(d.az).toFixed(2);
+    document.getElementById('inspRoll').textContent = Number(d.roll).toFixed(1);
+    document.getElementById('inspPitch').textContent = Number(d.pitch).toFixed(1);
+    document.getElementById('inspRollSub').textContent = Number(d.roll).toFixed(1) + '°';
+    document.getElementById('inspPitchSub').textContent = Number(d.pitch).toFixed(1) + '°';
+    document.getElementById('inspGyro').textContent = `${Number(d.gx).toFixed(1)}, ${Number(d.gy).toFixed(1)}, ${Number(d.gz).toFixed(1)}`;
+
+    document.getElementById('inspTiltDelta').textContent = d.calibrated ? `${Number(d.tiltDelta).toFixed(2)}° (gốc ${Number(d.baselineRoll).toFixed(1)}° / ${Number(d.baselinePitch).toFixed(1)}°)` : 'Chưa hiệu chuẩn';
+    document.getElementById('inspMoistureDanger').textContent = d.moistureDanger ? 'ĐÃ KÍCH HOẠT' : `${Number(d.moistureConfirmProgress || 0).toFixed(0)}% thời gian xác nhận`;
+
+    const sPct = document.getElementById('inspSeismicPct');
+    sPct.innerHTML = `${score.toFixed(0)} <span class="unit">%</span>`;
+    sPct.style.color = color;
+    document.getElementById('inspSeismicText').textContent = statusText;
+    document.getElementById('inspSeismicText').style.color = color;
+    const sBar = document.getElementById('inspSeismicBar');
+    sBar.style.width = `${Math.min(100, Math.max(2, score))}%`;
+    sBar.style.backgroundColor = color;
+}
+
+function calibrationCell(node, index) {
+    if (node.isSimulated) return '<span style="color:#94a3b8;">Node mô phỏng</span>';
+    const d = node.data;
+    let status = 'Chưa hiệu chuẩn';
+    if (!node.isOnline) status = 'Node offline';
+    else if (!d.mpuOK) status = 'Không nhận MPU-6050';
+    else if (Number(d.calibrationState) === 1) status = `Đang hiệu chuẩn: ${Number(d.calibrationProgress || 0).toFixed(0)}%`;
+    else if (Number(d.calibrationState) === 3 && d.calibrated) status = `Lần mới thất bại – giữ mốc cũ (${Number(d.baselineRoll).toFixed(1)}° / ${Number(d.baselinePitch).toFixed(1)}°)`;
+    else if (d.calibrated) status = `Đã chốt: Roll₀ ${Number(d.baselineRoll).toFixed(1)}° · Pitch₀ ${Number(d.baselinePitch).toFixed(1)}°<br>Độ lệch hiện tại: ${Number(d.tiltDelta).toFixed(2)}°`;
+    else if (Number(d.calibrationState) === 3) status = d.calibrationMessage || 'Hiệu chuẩn thất bại – thử lại';
+
+    const disabled = !node.isOnline || !d.mpuOK || Number(d.calibrationState) === 1;
+    const buttonLabel = Number(d.calibrationState) === 1 ? 'Đang lấy mẫu 8 giây…' : (d.calibrated ? 'Hiệu chuẩn lại' : 'Chốt góc gốc (8 giây)');
+    return `<div class="calibration-cell"><div class="calibration-status">${status}</div><button class="btn-calibrate" onclick="calibrateNode(${index})" ${disabled ? 'disabled' : ''}>${buttonLabel}</button></div>`;
+}
+
+function renderNodeTable() {
+    const tbody = document.getElementById('nodeTableBody');
+    tbody.innerHTML = '';
+    nodesList.forEach((node, index) => {
+        const d = node.data;
+        const score = Number(d.seismicScore || 0);
+        const color = getRiskColor(score);
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td><div class="node-name-cell"><span>📡</span><div><div>${node.name}</div><span class="node-tag ${node.isLocal ? 'tag-master' : 'tag-child'}">${nodeSourceLabel(node)}</span></div></div></td>
+            <td><code>${node.ip || '—'}</code><br><small style="color:${node.isOnline ? '#34d399' : '#ef4444'}">${node.isOnline ? 'ONLINE' : 'OFFLINE'}</small></td>
+            <td>${node.ssid || '—'}</td>
+            <td><strong>${Number(d.soilPercent).toFixed(1)}%</strong><br><small>Xu hướng: ${Number(d.soilTrendPerMinute || 0).toFixed(1)} điểm %/phút</small>${d.moistureDanger ? '<br><small style="color:#ef4444">Nguy cơ cao</small>' : ''}</td>
+            <td><span class="status-indicator" style="color:${d.vibration ? '#ef4444' : '#10b981'};font-weight:600;"><span class="dot" style="background:currentColor;"></span>${d.vibration ? 'PHÁT HIỆN RUNG' : 'Ổn định'}</span></td>
+            <td><small>a: [${Number(d.ax).toFixed(2)}, ${Number(d.ay).toFixed(2)}, ${Number(d.az).toFixed(2)}]</small><br><small>Roll/Pitch: ${Number(d.roll).toFixed(1)}° / ${Number(d.pitch).toFixed(1)}°</small><br><small>Δθ: ${d.calibrated ? Number(d.tiltDelta).toFixed(2) + '°' : '—'}</small></td>
+            <td>${calibrationCell(node, index)}</td>
+            <td><div style="font-weight:700;color:${color};">${score.toFixed(0)}%</div><small style="color:${color};">${getRiskStatusText(score)}</small></td>
+            <td>${index < DEFAULT_NODES.length ? '—' : `<button class="btn-action" onclick="deleteNode(${index})">Xóa</button>`}</td>`;
+        tbody.appendChild(tr);
+    });
+}
+
+function openAddNodeModal() { document.getElementById('addNodeModal').classList.add('active'); }
+function closeAddNodeModal() { document.getElementById('addNodeModal').classList.remove('active'); }
+
+function saveNewNode(e) {
+    e.preventDefault();
+    const name = document.getElementById('newNodeName').value.trim();
+    const ip = document.getElementById('newNodeIP').value.trim();
+    const ssid = document.getElementById('newNodeSSID').value.trim();
+    if (!name || !ip) return;
+
+    const duplicate = nodesList.some(n => !n.isSimulated && String(n.ip).toLowerCase() === ip.toLowerCase());
+    if (duplicate) { alert('IP/hostname này đã có trong danh sách Node.'); return; }
+
+    const newNode = {
+        id: 'node-' + Date.now(), name, isLocal: false, isSimulated: false,
+        isOnline: false, ip, ssid: ssid || '', data: { ...EMPTY_NODE_DATA }
+    };
+    nodesList.push(newNode);
+    persistNodes();
+    activeNodeIndex = nodesList.length - 1;
+    renderTopology();
+    renderNodeTable();
+    closeAddNodeModal();
+    document.getElementById('addNodeForm').reset();
+    document.getElementById('newNodeSSID').value = '';
+    fetchNodeData(newNode).then(() => { renderTopology(); renderNodeTable(); });
+}
+
+function deleteNode(index) {
+    if (!nodesList[index] || index < DEFAULT_NODES.length) return;
+    if (confirm(`Bạn có chắc muốn xóa "${nodesList[index].name}" khỏi danh sách theo dõi?`)) {
+        nodesList.splice(index, 1);
+        if (activeNodeIndex >= nodesList.length) activeNodeIndex = 0;
+        persistNodes(); renderTopology(); renderNodeTable();
+    }
+}
+
+async function calibrateNode(index) {
+    const node = nodesList[index];
+    if (!node || node.isSimulated || !node.isOnline || !node.data.mpuOK) return;
+    try {
+        const target = node.isLocal ? '?node=' + encodeURIComponent(node.id) : '';
+        const response = await demoFetch(nodeBaseUrl(node) + '/calibrate' + target, {
+            method: 'POST', cache: 'no-store'
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.message || 'Không thể bắt đầu hiệu chuẩn');
+        node.data.calibrationState = 1;
+        node.data.calibrationProgress = 0;
+        renderNodeTable();
+        renderInspector();
+    } catch (err) {
+        alert('Không gửi được lệnh hiệu chuẩn tới ' + node.ip + '. Kiểm tra node, cùng mạng Wi-Fi và quyền truy cập mạng nội bộ/CORS. Chi tiết: ' + err.message);
+    }
+}
+
+function toggleDemoQuake(nodeIndex) {
+    if (!nodesList[nodeIndex] || !nodesList[nodeIndex].isSimulated) return;
+    const node = nodesList[nodeIndex];
+    node.demoQuake = !node.demoQuake;
+    const btn = document.getElementById('btnSim' + (nodeIndex + 1));
+    if (node.demoQuake) {
+        btn.classList.add('active-quake');
+        btn.textContent = `Dừng rung Node ${nodeIndex + 1}`;
+        node.data.vibration = true; node.data.seismicScore = 94;
+        node.data.ax = 5.2; node.data.ay = 3.6; node.data.az = 14.8;
+        node.data.roll = 21.5; node.data.pitch = -14.2;
+    } else {
+        btn.classList.remove('active-quake');
+        btn.textContent = `Thử rung Node ${nodeIndex + 1}`;
+        node.data = { ...DEFAULT_NODES[nodeIndex].data };
+    }
+    selectNode(nodeIndex); renderTopology(); renderNodeTable();
+}
+
+function applyNodeData(node, d) {
+    node.isOnline = true;
+    node.data = {
+        ...node.data,
+        soilPercent: Number(d.soilPercent || 0), soilRaw: Number(d.soilRaw || 0),
+        soilTrendPerMinute: Number(d.soilTrendPerMinute || 0), soilTrendScore: Number(d.soilTrendScore || 0),
+        vibration: !!d.vibration, mpuOK: !!d.mpuOK,
+        ax: Number(d.ax || 0), ay: Number(d.ay || 0), az: Number(d.az || 0),
+        gx: Number(d.gx || 0), gy: Number(d.gy || 0), gz: Number(d.gz || 0),
+        roll: Number(d.roll || 0), pitch: Number(d.pitch || 0),
+        tiltDelta: Number(d.tiltDelta || 0), tiltScore: Number(d.tiltScore || 0),
+        calibrated: !!d.calibrated, calibrationState: Number(d.calibrationState || 0),
+        calibrationProgress: Number(d.calibrationProgress || 0),
+        calibrationMessage: d.calibrationMessage || '',
+        baselineRoll: Number(d.baselineRoll || 0), baselinePitch: Number(d.baselinePitch || 0),
+        moistureDanger: !!d.moistureDanger,
+        moistureConfirmProgress: Number(d.moistureConfirmProgress || 0),
+        seismicScore: Number(d.riskScore ?? d.seismicScore ?? 0)
+    };
+    if (d.ip) node.ip = d.ip;
+    if (d.ssid) node.ssid = d.ssid;
+}
+
+async function fetchLocalNodes(localNodes) {
+    try {
+        const response = await demoFetch('/data/all', { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const { nodes } = await response.json();
+        for (const node of localNodes) {
+            const data = nodes.find(item => item.nodeId === node.id);
+            if (data) applyNodeData(node, data);
+            else node.isOnline = false;
+        }
+    } catch (err) {
+        for (const node of localNodes) node.isOnline = false;
+    }
+}
+
+async function fetchNodeData(node) {
+    if (!node || node.isSimulated) return;
+    try {
+        const response = await demoFetch(nodeBaseUrl(node) + '/data?t=' + Date.now(), { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const d = await response.json();
+        applyNodeData(node, d);
+    } catch (err) {
+        node.isOnline = false;
+    }
+}
+
+async function fetchAllNodeData() {
+    if (nodePollBusy) return;
+    nodePollBusy = true;
+    try {
+        const localNodes = nodesList.filter(node => node.isLocal);
+        const extraNodes = nodesList.slice(DEFAULT_NODES.length);
+        await Promise.all([fetchLocalNodes(localNodes), ...extraNodes.map(fetchNodeData)]);
+        const master = localNodes.find(node => node.isOnline);
+        if (master && master.isOnline) {
+            document.getElementById('headerIP').textContent = master.ip;
+            document.getElementById('headerStatus').textContent = 'ESP32 Đang Hoạt Động';
+            document.getElementById('headerSSID').textContent = master.ssid || 'Đã kết nối';
+        } else {
+            document.getElementById('headerStatus').textContent = 'Mất kết nối ESP32';
+        }
+        renderTopology();
+        renderNodeTable();
+    } finally {
+        nodePollBusy = false;
+    }
+}
+
+loadNodes();
+renderTopology();
+renderNodeTable();
+fetchAllNodeData();
+setInterval(fetchAllNodeData, 1000);
+</script>
+
+</body>
+</html>

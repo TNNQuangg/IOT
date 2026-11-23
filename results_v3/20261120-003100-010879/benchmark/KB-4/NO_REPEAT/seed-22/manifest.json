@@ -1,0 +1,42 @@
+{
+  "scenario": 4,
+  "seed": 22,
+  "config": {
+    "name": "NO_REPEAT",
+    "profile": "LORA_STRESS",
+    "fixed": 0,
+    "alarm_copies": 3,
+    "repeat": false,
+    "escalate": true,
+    "bypass": true,
+    "oracle": false,
+    "l0": 5,
+    "silence": 90,
+    "jitter": [
+      0.1,
+      0.4
+    ],
+    "tau": 1,
+    "interference": 120
+  },
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "rng": "Python Random (MT19937), independent named streams",
+  "model_sha256": "902854ee78ad6db12348cca4b5d812a0e13525df7f2191a95656e9bfb587b4b7",
+  "activity_end": 1000,
+  "simulation_end": 1300,
+  "clock": "discrete events in seconds",
+  "wall_seconds": 0.02966010000091046,
+  "acceleration": 43829.92639809355,
+  "radio": {
+    "frequency_mhz": 868,
+    "power_dbm": 14,
+    "sf": 7,
+    "bw_hz": 125000,
+    "cr": "4/5",
+    "preamble": 8,
+    "header": "explicit",
+    "crc": true,
+    "payload_bytes": 9,
+    "airtime": 0.041215999999999996
+  }
+}

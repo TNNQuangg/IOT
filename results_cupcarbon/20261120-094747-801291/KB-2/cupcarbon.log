@@ -1,0 +1,946 @@
+Nov 20, 2026 9:48:10 AM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @3a71f4dd'
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by com.sun.glass.utils.NativeLibLoader in an unnamed module (file:/C:/Users/nguye/Desktop/cupcarbon_windows/cupcarbon_runtime/cupcarbon.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Mobility: true
+Generate Restul File: false
+Initialization ... 
+End of Initialization.
+Start Simulation ... 
+[BATCH_START] target_wall_s=7
+S1 >> [INIT] Sensor Node  1  khoi dong. NextHop:  11  Child:  2 
+S1 >> [GEN] t= 0.0033333333333333335  node= 1  src= 1  seq= 1.0  flag= 0  val= 1.0 
+S1 >> [TX] t= 0.0033333333333333335  node= 1  to= 11  src= 1  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S10 >> [INIT] Sensor Node  10  khoi dong. NextHop:  9  Child:  0 
+S10 >> [GEN] t= 0.0033333333333333335  node= 10  src= 10  seq= 1.0  flag= 0  val= 2.0 
+S10 >> [TX] t= 0.0033333333333333335  node= 10  to= 9  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> ========================================================== 
+S11 >> >>> GATEWAY TRUNG TAM  (Sink Node  11 ) DA SAN SANG <<< 
+S11 >> ========================================================== 
+S2 >> [INIT] Sensor Node  2  khoi dong. NextHop:  1  Child:  3 
+S2 >> [GEN] t= 0.0033333333333333335  node= 2  src= 2  seq= 1.0  flag= 0  val= 1.0 
+S2 >> [TX] t= 0.0033333333333333335  node= 2  to= 1  src= 2  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [INIT] Sensor Node  3  khoi dong. NextHop:  2  Child:  4 
+S3 >> [GEN] t= 0.0033333333333333335  node= 3  src= 3  seq= 1.0  flag= 0  val= 0.0 
+S3 >> [TX] t= 0.0033333333333333335  node= 3  to= 2  src= 3  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [INIT] Sensor Node  4  khoi dong. NextHop:  3  Child:  5 
+S4 >> [GEN] t= 0.0033333333333333335  node= 4  src= 4  seq= 1.0  flag= 0  val= 1.0 
+S4 >> [TX] t= 0.0033333333333333335  node= 4  to= 3  src= 4  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [INIT] Sensor Node  5  khoi dong. NextHop:  4  Child:  6 
+S5 >> [GEN] t= 0.0033333333333333335  node= 5  src= 5  seq= 1.0  flag= 0  val= 2.0 
+S5 >> [TX] t= 0.0033333333333333335  node= 5  to= 4  src= 5  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [INIT] Sensor Node  6  khoi dong. NextHop:  5  Child:  7 
+S6 >> [GEN] t= 0.0033333333333333335  node= 6  src= 6  seq= 1.0  flag= 0  val= 2.0 
+S6 >> [TX] t= 0.0033333333333333335  node= 6  to= 5  src= 6  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [INIT] Sensor Node  7  khoi dong. NextHop:  6  Child:  8 
+S7 >> [GEN] t= 0.0033333333333333335  node= 7  src= 7  seq= 1.0  flag= 0  val= 2.0 
+S7 >> [TX] t= 0.0033333333333333335  node= 7  to= 6  src= 7  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [INIT] Sensor Node  8  khoi dong. NextHop:  7  Child:  9 
+S8 >> [GEN] t= 0.0033333333333333335  node= 8  src= 8  seq= 1.0  flag= 0  val= 1.0 
+S8 >> [TX] t= 0.0033333333333333335  node= 8  to= 7  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S9 >> [INIT] Sensor Node  9  khoi dong. NextHop:  8  Child:  10 
+S9 >> [GEN] t= 0.0033333333333333335  node= 9  src= 9  seq= 1.0  flag= 0  val= 1.0 
+S9 >> [TX] t= 0.0033333333333333335  node= 9  to= 8  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 0.06333333333333332  src= 1  seq= 1.0  flag= 0  val= 1.0  lat= 0.05999999999999999 
+S11 >> [GATEWAY] Nhan Delta tu Node  1  | Do lech Delta:  1.0 
+S8 >> [BUF] t= 0.16433333333333333  node= 8  b= 57 
+S8 >> [RX] t= 0.16433333333333333  rx= 8  from= 9  src= 9  seq= 1.0  flag= 0 
+S8 >> [FWD] t= 0.16433333333333333  node= 8  src= 9  seq= 1.0 
+S8 >> [TX] t= 0.16433333333333333  node= 8  to= 7  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [BUF] t= 0.16833333333333336  node= 3  b= 57 
+S3 >> [RX] t= 0.16833333333333336  rx= 3  from= 4  src= 4  seq= 1.0  flag= 0 
+S3 >> [FWD] t= 0.16833333333333336  node= 3  src= 4  seq= 1.0 
+S3 >> [TX] t= 0.16833333333333336  node= 3  to= 2  src= 4  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [BUF] t= 0.18133333333333335  node= 4  b= 57 
+S4 >> [RX] t= 0.18133333333333335  rx= 4  from= 5  src= 5  seq= 1.0  flag= 0 
+S4 >> [FWD] t= 0.18133333333333335  node= 4  src= 5  seq= 1.0 
+S4 >> [TX] t= 0.18133333333333335  node= 4  to= 3  src= 5  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S10 >> [BUF] t= 0.20433333333333334  node= 10  b= -1 
+S5 >> [BUF] t= 0.21533333333333338  node= 5  b= 57 
+S5 >> [RX] t= 0.21533333333333338  rx= 5  from= 6  src= 6  seq= 1.0  flag= 0 
+S5 >> [FWD] t= 0.21533333333333338  node= 5  src= 6  seq= 1.0 
+S5 >> [TX] t= 0.21533333333333338  node= 5  to= 4  src= 6  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [BUF] t= 0.21633333333333338  node= 6  b= 57 
+S6 >> [RX] t= 0.21633333333333338  rx= 6  from= 7  src= 7  seq= 1.0  flag= 0 
+S6 >> [FWD] t= 0.21633333333333338  node= 6  src= 7  seq= 1.0 
+S6 >> [TX] t= 0.21633333333333338  node= 6  to= 5  src= 7  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [BUF] t= 0.2283333333333334  node= 7  b= 113 
+S7 >> [RX] t= 0.2283333333333334  rx= 7  from= 8  src= 8  seq= 1.0  flag= 0 
+S7 >> [FWD] t= 0.2283333333333334  node= 7  src= 8  seq= 1.0 
+S7 >> [TX] t= 0.2283333333333334  node= 7  to= 6  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [BUF] t= 0.2303333333333334  node= 2  b= 113 
+S2 >> [RX] t= 0.2303333333333334  rx= 2  from= 3  src= 3  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 0.2303333333333334  node= 2  src= 3  seq= 1.0 
+S2 >> [TX] t= 0.2303333333333334  node= 2  to= 1  src= 3  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [BUF] t= 0.24033333333333334  node= 1  b= 57 
+S1 >> [RX] t= 0.24033333333333334  rx= 1  from= 2  src= 2  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 0.24033333333333334  node= 1  src= 2  seq= 1.0 
+S1 >> [TX] t= 0.24033333333333334  node= 1  to= 11  src= 2  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S9 >> [BUF] t= 0.24333333333333335  node= 9  b= 59 
+S9 >> [RX] t= 0.24333333333333335  rx= 9  from= 10  src= 10  seq= 1.0  flag= 0 
+S9 >> [FWD] t= 0.24333333333333335  node= 9  src= 10  seq= 1.0 
+S9 >> [TX] t= 0.24333333333333335  node= 9  to= 8  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 0.3033333333333334  src= 2  seq= 1.0  flag= 0  val= 1.0  lat= 0.30000000000000004 
+S11 >> [GATEWAY] Nhan Delta tu Node  2  | Do lech Delta:  1.0 
+S3 >> [RX] t= 0.35733333333333345  rx= 3  from= 4  src= 5  seq= 1.0  flag= 0 
+S3 >> [FWD] t= 0.35733333333333345  node= 3  src= 5  seq= 1.0 
+S3 >> [TX] t= 0.35733333333333345  node= 3  to= 2  src= 5  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [RX] t= 0.35833333333333345  rx= 8  from= 9  src= 10  seq= 1.0  flag= 0 
+S8 >> [FWD] t= 0.35833333333333345  node= 8  src= 10  seq= 1.0 
+S8 >> [TX] t= 0.35833333333333345  node= 8  to= 7  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 0.38433333333333347  rx= 4  from= 5  src= 6  seq= 1.0  flag= 0 
+S4 >> [FWD] t= 0.38433333333333347  node= 4  src= 6  seq= 1.0 
+S4 >> [TX] t= 0.38433333333333347  node= 4  to= 3  src= 6  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 0.3953333333333335  rx= 1  from= 2  src= 3  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 0.3953333333333335  node= 1  src= 3  seq= 1.0 
+S1 >> [TX] t= 0.3953333333333335  node= 1  to= 11  src= 3  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 0.4323333333333335  rx= 5  from= 6  src= 7  seq= 1.0  flag= 0 
+S5 >> [FWD] t= 0.4323333333333335  node= 5  src= 7  seq= 1.0 
+S5 >> [TX] t= 0.4323333333333335  node= 5  to= 4  src= 7  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 0.45633333333333354  rx= 7  from= 8  src= 9  seq= 1.0  flag= 0 
+S7 >> [FWD] t= 0.45633333333333354  node= 7  src= 9  seq= 1.0 
+S7 >> [TX] t= 0.45633333333333354  node= 7  to= 6  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 0.4633333333333335  src= 3  seq= 1.0  flag= 0  val= 0.0  lat= 0.46000000000000013 
+S11 >> [GATEWAY] Nhan Delta tu Node  3  | Do lech Delta:  0.0 
+S2 >> [RX] t= 0.46433333333333354  rx= 2  from= 3  src= 4  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 0.46433333333333354  node= 2  src= 4  seq= 1.0 
+S2 >> [TX] t= 0.46433333333333354  node= 2  to= 1  src= 4  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 0.46533333333333354  rx= 6  from= 7  src= 8  seq= 1.0  flag= 0 
+S6 >> [FWD] t= 0.46533333333333354  node= 6  src= 8  seq= 1.0 
+S6 >> [TX] t= 0.46533333333333354  node= 6  to= 5  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 0.5803333333333335  rx= 1  from= 2  src= 4  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 0.5803333333333335  node= 1  src= 4  seq= 1.0 
+S1 >> [TX] t= 0.5803333333333335  node= 1  to= 11  src= 4  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 0.5833333333333335  rx= 3  from= 4  src= 6  seq= 1.0  flag= 0 
+S3 >> [FWD] t= 0.5833333333333335  node= 3  src= 6  seq= 1.0 
+S3 >> [TX] t= 0.5833333333333335  node= 3  to= 2  src= 6  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 0.6003333333333334  rx= 4  from= 5  src= 7  seq= 1.0  flag= 0 
+S4 >> [FWD] t= 0.6003333333333334  node= 4  src= 7  seq= 1.0 
+S4 >> [TX] t= 0.6003333333333334  node= 4  to= 3  src= 7  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [RX] t= 0.6193333333333334  rx= 2  from= 3  src= 5  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 0.6193333333333334  node= 2  src= 5  seq= 1.0 
+S2 >> [TX] t= 0.6193333333333334  node= 2  to= 1  src= 5  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 0.6193333333333334  rx= 7  from= 8  src= 10  seq= 1.0  flag= 0 
+S7 >> [FWD] t= 0.6193333333333334  node= 7  src= 10  seq= 1.0 
+S7 >> [TX] t= 0.6193333333333334  node= 7  to= 6  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 0.6313333333333333  rx= 5  from= 6  src= 8  seq= 1.0  flag= 0 
+S5 >> [FWD] t= 0.6313333333333333  node= 5  src= 8  seq= 1.0 
+S5 >> [TX] t= 0.6313333333333333  node= 5  to= 4  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 0.6433333333333333  src= 4  seq= 1.0  flag= 0  val= 1.0  lat= 0.64 
+S11 >> [GATEWAY] Nhan Delta tu Node  4  | Do lech Delta:  1.0 
+S6 >> [RX] t= 0.6443333333333333  rx= 6  from= 7  src= 9  seq= 1.0  flag= 0 
+S6 >> [FWD] t= 0.6443333333333333  node= 6  src= 9  seq= 1.0 
+S6 >> [TX] t= 0.6443333333333333  node= 6  to= 5  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 0.7743333333333334  rx= 1  from= 2  src= 5  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 0.7743333333333334  node= 1  src= 5  seq= 1.0 
+S1 >> [TX] t= 0.7743333333333334  node= 1  to= 11  src= 5  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 0.8083333333333336  rx= 3  from= 4  src= 7  seq= 1.0  flag= 0 
+S3 >> [FWD] t= 0.8083333333333336  node= 3  src= 7  seq= 1.0 
+S3 >> [TX] t= 0.8083333333333336  node= 3  to= 2  src= 7  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 0.8093333333333335  rx= 4  from= 5  src= 8  seq= 1.0  flag= 0 
+S4 >> [FWD] t= 0.8093333333333335  node= 4  src= 8  seq= 1.0 
+S4 >> [TX] t= 0.8093333333333335  node= 4  to= 3  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 0.8103333333333335  rx= 6  from= 7  src= 10  seq= 1.0  flag= 0 
+S6 >> [FWD] t= 0.8103333333333335  node= 6  src= 10  seq= 1.0 
+S6 >> [TX] t= 0.8103333333333335  node= 6  to= 5  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 0.8413333333333334  rx= 5  from= 6  src= 9  seq= 1.0  flag= 0 
+S5 >> [FWD] t= 0.8413333333333334  node= 5  src= 9  seq= 1.0 
+S5 >> [TX] t= 0.8413333333333334  node= 5  to= 4  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 0.8433333333333334  src= 5  seq= 1.0  flag= 0  val= 2.0  lat= 0.8400000000000001 
+S11 >> [GATEWAY] Nhan Delta tu Node  5  | Do lech Delta:  2.0 
+S2 >> [RX] t= 0.8543333333333335  rx= 2  from= 3  src= 6  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 0.8543333333333335  node= 2  src= 6  seq= 1.0 
+S2 >> [TX] t= 0.8543333333333335  node= 2  to= 1  src= 6  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 1.0103333333333337  rx= 4  from= 5  src= 9  seq= 1.0  flag= 0 
+S4 >> [FWD] t= 1.0103333333333337  node= 4  src= 9  seq= 1.0 
+S4 >> [TX] t= 1.0103333333333337  node= 4  to= 3  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 1.0183333333333338  rx= 1  from= 2  src= 6  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 1.0183333333333338  node= 1  src= 6  seq= 1.0 
+S1 >> [TX] t= 1.0183333333333338  node= 1  to= 11  src= 6  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 1.043333333333334  rx= 3  from= 4  src= 8  seq= 1.0  flag= 0 
+S3 >> [FWD] t= 1.043333333333334  node= 3  src= 8  seq= 1.0 
+S3 >> [TX] t= 1.043333333333334  node= 3  to= 2  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 1.0543333333333338  rx= 5  from= 6  src= 10  seq= 1.0  flag= 0 
+S5 >> [FWD] t= 1.0543333333333338  node= 5  src= 10  seq= 1.0 
+S5 >> [TX] t= 1.0543333333333338  node= 5  to= 4  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 1.083333333333334  src= 6  seq= 1.0  flag= 0  val= 2.0  lat= 1.0800000000000005 
+S11 >> [GATEWAY] Nhan Delta tu Node  6  | Do lech Delta:  2.0 
+S2 >> [RX] t= 1.1033333333333342  rx= 2  from= 3  src= 7  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 1.1033333333333342  node= 2  src= 7  seq= 1.0 
+S2 >> [TX] t= 1.1033333333333342  node= 2  to= 1  src= 7  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 1.182333333333334  rx= 1  from= 2  src= 7  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 1.182333333333334  node= 1  src= 7  seq= 1.0 
+S1 >> [TX] t= 1.182333333333334  node= 1  to= 11  src= 7  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 1.189333333333334  rx= 4  from= 5  src= 10  seq= 1.0  flag= 0 
+S4 >> [FWD] t= 1.189333333333334  node= 4  src= 10  seq= 1.0 
+S4 >> [TX] t= 1.189333333333334  node= 4  to= 3  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 1.2023333333333341  rx= 3  from= 4  src= 9  seq= 1.0  flag= 0 
+S3 >> [FWD] t= 1.2023333333333341  node= 3  src= 9  seq= 1.0 
+S3 >> [TX] t= 1.2023333333333341  node= 3  to= 2  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 1.243333333333334  src= 7  seq= 1.0  flag= 0  val= 2.0  lat= 1.2400000000000007 
+S11 >> [GATEWAY] Nhan Delta tu Node  7  | Do lech Delta:  2.0 
+S2 >> [RX] t= 1.3313333333333341  rx= 2  from= 3  src= 8  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 1.3313333333333341  node= 2  src= 8  seq= 1.0 
+S2 >> [TX] t= 1.3313333333333341  node= 2  to= 1  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 1.415333333333334  rx= 1  from= 2  src= 8  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 1.415333333333334  node= 1  src= 8  seq= 1.0 
+S1 >> [TX] t= 1.415333333333334  node= 1  to= 11  src= 8  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 1.4523333333333341  rx= 3  from= 4  src= 10  seq= 1.0  flag= 0 
+S3 >> [FWD] t= 1.4523333333333341  node= 3  src= 10  seq= 1.0 
+S3 >> [TX] t= 1.4523333333333341  node= 3  to= 2  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [RX] t= 1.481333333333334  rx= 2  from= 3  src= 9  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 1.481333333333334  node= 2  src= 9  seq= 1.0 
+S2 >> [TX] t= 1.481333333333334  node= 2  to= 1  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 1.483333333333334  src= 8  seq= 1.0  flag= 0  val= 1.0  lat= 1.4800000000000006 
+S11 >> [GATEWAY] Nhan Delta tu Node  8  | Do lech Delta:  1.0 
+S1 >> [RX] t= 1.600333333333334  rx= 1  from= 2  src= 9  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 1.600333333333334  node= 1  src= 9  seq= 1.0 
+S1 >> [TX] t= 1.600333333333334  node= 1  to= 11  src= 9  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [RX] t= 1.658333333333334  rx= 2  from= 3  src= 10  seq= 1.0  flag= 0 
+S2 >> [FWD] t= 1.658333333333334  node= 2  src= 10  seq= 1.0 
+S2 >> [TX] t= 1.658333333333334  node= 2  to= 1  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 1.663333333333334  src= 9  seq= 1.0  flag= 0  val= 1.0  lat= 1.6600000000000006 
+S11 >> [GATEWAY] Nhan Delta tu Node  9  | Do lech Delta:  1.0 
+S1 >> [RX] t= 1.8323333333333343  rx= 1  from= 2  src= 10  seq= 1.0  flag= 0 
+S1 >> [FWD] t= 1.8323333333333343  node= 1  src= 10  seq= 1.0 
+S1 >> [TX] t= 1.8323333333333343  node= 1  to= 11  src= 10  seq= 1.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 1.903333333333334  src= 10  seq= 1.0  flag= 0  val= 2.0  lat= 1.9000000000000006 
+S11 >> [GATEWAY] Nhan Delta tu Node  10  | Do lech Delta:  2.0 
+S10 >> [GEN] t= 5.20433333333331  node= 10  src= 10  seq= 2.0  flag= 0  val= 4.0 
+S10 >> [TX] t= 5.20433333333331  node= 10  to= 9  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S10 >> [BUF] t= 5.412333333333307  node= 10  b= -1 
+S9 >> [GEN] t= 5.445333333333311  node= 9  src= 9  seq= 2.0  flag= 0  val= 0.0 
+S9 >> [TX] t= 5.445333333333311  node= 9  to= 8  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [GEN] t= 5.51033333333331  node= 8  src= 8  seq= 2.0  flag= 0  val= 3.0 
+S8 >> [TX] t= 5.51033333333331  node= 8  to= 7  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S9 >> [BUF] t= 5.647333333333307  node= 9  b= 49 
+S9 >> [RX] t= 5.647333333333307  rx= 9  from= 10  src= 10  seq= 2.0  flag= 0 
+S9 >> [FWD] t= 5.647333333333307  node= 9  src= 10  seq= 2.0 
+S9 >> [TX] t= 5.647333333333307  node= 9  to= 8  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [BUF] t= 5.678333333333307  node= 8  b= 49 
+S8 >> [RX] t= 5.678333333333307  rx= 8  from= 9  src= 9  seq= 2.0  flag= 0 
+S8 >> [FWD] t= 5.678333333333307  node= 8  src= 9  seq= 2.0 
+S8 >> [TX] t= 5.678333333333307  node= 8  to= 7  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [GEN] t= 5.811333333333305  node= 7  src= 7  seq= 2.0  flag= 0  val= 4.0 
+S7 >> [TX] t= 5.811333333333305  node= 7  to= 6  src= 7  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [RX] t= 5.897333333333304  rx= 8  from= 9  src= 10  seq= 2.0  flag= 0 
+S8 >> [FWD] t= 5.897333333333304  node= 8  src= 10  seq= 2.0 
+S8 >> [TX] t= 5.897333333333304  node= 8  to= 7  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [GEN] t= 5.985333333333305  node= 6  src= 6  seq= 2.0  flag= 0  val= 1.0 
+S6 >> [TX] t= 5.985333333333305  node= 6  to= 5  src= 6  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [BUF] t= 5.986333333333304  node= 7  b= 147 
+S7 >> [RX] t= 5.986333333333304  rx= 7  from= 8  src= 8  seq= 2.0  flag= 0 
+S7 >> [FWD] t= 5.986333333333304  node= 7  src= 8  seq= 2.0 
+S7 >> [TX] t= 5.986333333333304  node= 7  to= 6  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [BUF] t= 6.181333333333303  node= 6  b= 98 
+S6 >> [RX] t= 6.181333333333303  rx= 6  from= 7  src= 7  seq= 2.0  flag= 0 
+S6 >> [FWD] t= 6.181333333333303  node= 6  src= 7  seq= 2.0 
+S6 >> [TX] t= 6.181333333333303  node= 6  to= 5  src= 7  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 6.201333333333302  rx= 7  from= 8  src= 9  seq= 2.0  flag= 0 
+S7 >> [FWD] t= 6.201333333333302  node= 7  src= 9  seq= 2.0 
+S7 >> [TX] t= 6.201333333333302  node= 7  to= 6  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [GEN] t= 6.247333333333307  node= 5  src= 5  seq= 2.0  flag= 0  val= 0.0 
+S5 >> [TX] t= 6.247333333333307  node= 5  to= 4  src= 5  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 6.380333333333302  rx= 6  from= 7  src= 8  seq= 2.0  flag= 0 
+S6 >> [FWD] t= 6.380333333333302  node= 6  src= 8  seq= 2.0 
+S6 >> [TX] t= 6.380333333333302  node= 6  to= 5  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [GEN] t= 6.402333333333306  node= 4  src= 4  seq= 2.0  flag= 0  val= 2.0 
+S4 >> [TX] t= 6.402333333333306  node= 4  to= 3  src= 4  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [BUF] t= 6.419333333333306  node= 5  b= 99 
+S5 >> [RX] t= 6.419333333333306  rx= 5  from= 6  src= 6  seq= 2.0  flag= 0 
+S5 >> [FWD] t= 6.419333333333306  node= 5  src= 6  seq= 2.0 
+S5 >> [TX] t= 6.419333333333306  node= 5  to= 4  src= 6  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 6.423333333333302  rx= 7  from= 8  src= 10  seq= 2.0  flag= 0 
+S7 >> [FWD] t= 6.423333333333302  node= 7  src= 10  seq= 2.0 
+S7 >> [TX] t= 6.423333333333302  node= 7  to= 6  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 6.571333333333304  rx= 5  from= 6  src= 7  seq= 2.0  flag= 0 
+S5 >> [FWD] t= 6.571333333333304  node= 5  src= 7  seq= 2.0 
+S5 >> [TX] t= 6.571333333333304  node= 5  to= 4  src= 7  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 6.5763333333333005  rx= 6  from= 7  src= 9  seq= 2.0  flag= 0 
+S6 >> [FWD] t= 6.5763333333333005  node= 6  src= 9  seq= 2.0 
+S6 >> [TX] t= 6.5763333333333005  node= 6  to= 5  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [BUF] t= 6.579333333333304  node= 4  b= 99 
+S4 >> [RX] t= 6.579333333333304  rx= 4  from= 5  src= 5  seq= 2.0  flag= 0 
+S4 >> [FWD] t= 6.579333333333304  node= 4  src= 5  seq= 2.0 
+S4 >> [TX] t= 6.579333333333304  node= 4  to= 3  src= 5  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [GEN] t= 6.672333333333308  node= 3  src= 3  seq= 2.0  flag= 0  val= 2.0 
+S3 >> [TX] t= 6.672333333333308  node= 3  to= 2  src= 3  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 6.7563333333332976  rx= 6  from= 7  src= 10  seq= 2.0  flag= 0 
+S6 >> [FWD] t= 6.7563333333332976  node= 6  src= 10  seq= 2.0 
+S6 >> [TX] t= 6.7563333333332976  node= 6  to= 5  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 6.8083333333333  rx= 5  from= 6  src= 8  seq= 2.0  flag= 0 
+S5 >> [FWD] t= 6.8083333333333  node= 5  src= 8  seq= 2.0 
+S5 >> [TX] t= 6.8083333333333  node= 5  to= 4  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 6.8193333333333  rx= 4  from= 5  src= 6  seq= 2.0  flag= 0 
+S4 >> [FWD] t= 6.8193333333333  node= 4  src= 6  seq= 2.0 
+S4 >> [TX] t= 6.8193333333333  node= 4  to= 3  src= 6  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [BUF] t= 6.827333333333305  node= 3  b= 99 
+S3 >> [RX] t= 6.827333333333305  rx= 3  from= 4  src= 4  seq= 2.0  flag= 0 
+S3 >> [FWD] t= 6.827333333333305  node= 3  src= 4  seq= 2.0 
+S3 >> [TX] t= 6.827333333333305  node= 3  to= 2  src= 4  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [GEN] t= 6.883333333333308  node= 2  src= 2  seq= 2.0  flag= 0  val= 3.0 
+S2 >> [TX] t= 6.883333333333308  node= 2  to= 1  src= 2  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 7.017333333333305  rx= 3  from= 4  src= 5  seq= 2.0  flag= 0 
+S3 >> [FWD] t= 7.017333333333305  node= 3  src= 5  seq= 2.0 
+S3 >> [TX] t= 7.017333333333305  node= 3  to= 2  src= 5  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 7.0263333333333  rx= 4  from= 5  src= 7  seq= 2.0  flag= 0 
+S4 >> [FWD] t= 7.0263333333333  node= 4  src= 7  seq= 2.0 
+S4 >> [TX] t= 7.0263333333333  node= 4  to= 3  src= 7  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [GEN] t= 7.038333333333307  node= 1  src= 1  seq= 2.0  flag= 0  val= 0.0 
+S1 >> [TX] t= 7.038333333333307  node= 1  to= 11  src= 1  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 7.0573333333332995  rx= 5  from= 6  src= 9  seq= 2.0  flag= 0 
+S5 >> [FWD] t= 7.0573333333332995  node= 5  src= 9  seq= 2.0 
+S5 >> [TX] t= 7.0573333333332995  node= 5  to= 4  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 7.103333333333289  src= 1  seq= 2.0  flag= 0  val= 0.0  lat= 0.06499999999998174 
+S11 >> [GATEWAY] Nhan Delta tu Node  1  | Do lech Delta:  0.0 
+S2 >> [BUF] t= 7.133333333333306  node= 2  b= 149 
+S2 >> [RX] t= 7.133333333333306  rx= 2  from= 3  src= 3  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 7.133333333333306  node= 2  src= 3  seq= 2.0 
+S2 >> [TX] t= 7.133333333333306  node= 2  to= 1  src= 3  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 7.217333333333298  rx= 4  from= 5  src= 8  seq= 2.0  flag= 0 
+S4 >> [FWD] t= 7.217333333333298  node= 4  src= 8  seq= 2.0 
+S4 >> [TX] t= 7.217333333333298  node= 4  to= 3  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 7.252333333333302  rx= 3  from= 4  src= 6  seq= 2.0  flag= 0 
+S3 >> [FWD] t= 7.252333333333302  node= 3  src= 6  seq= 2.0 
+S3 >> [TX] t= 7.252333333333302  node= 3  to= 2  src= 6  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [BUF] t= 7.254333333333306  node= 1  b= 99 
+S1 >> [RX] t= 7.254333333333306  rx= 1  from= 2  src= 2  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 7.254333333333306  node= 1  src= 2  seq= 2.0 
+S1 >> [TX] t= 7.254333333333306  node= 1  to= 11  src= 2  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 7.297333333333298  rx= 5  from= 6  src= 10  seq= 2.0  flag= 0 
+S5 >> [FWD] t= 7.297333333333298  node= 5  src= 10  seq= 2.0 
+S5 >> [TX] t= 7.297333333333298  node= 5  to= 4  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 7.323333333333287  src= 2  seq= 2.0  flag= 0  val= 3.0  lat= 0.4399999999999791 
+S11 >> [GATEWAY] Nhan Delta tu Node  2  | Do lech Delta:  3.0 
+S2 >> [RX] t= 7.355333333333304  rx= 2  from= 3  src= 4  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 7.355333333333304  node= 2  src= 4  seq= 2.0 
+S2 >> [TX] t= 7.355333333333304  node= 2  to= 1  src= 4  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 7.4373333333333  rx= 3  from= 4  src= 7  seq= 2.0  flag= 0 
+S3 >> [FWD] t= 7.4373333333333  node= 3  src= 7  seq= 2.0 
+S3 >> [TX] t= 7.4373333333333  node= 3  to= 2  src= 7  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 7.449333333333303  rx= 1  from= 2  src= 3  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 7.449333333333303  node= 1  src= 3  seq= 2.0 
+S1 >> [TX] t= 7.449333333333303  node= 1  to= 11  src= 3  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 7.451333333333295  rx= 4  from= 5  src= 9  seq= 2.0  flag= 0 
+S4 >> [FWD] t= 7.451333333333295  node= 4  src= 9  seq= 2.0 
+S4 >> [TX] t= 7.451333333333295  node= 4  to= 3  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 7.503333333333284  src= 3  seq= 2.0  flag= 0  val= 2.0  lat= 0.8309999999999764 
+S11 >> [GATEWAY] Nhan Delta tu Node  3  | Do lech Delta:  2.0 
+S2 >> [RX] t= 7.542333333333302  rx= 2  from= 3  src= 5  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 7.542333333333302  node= 2  src= 5  seq= 2.0 
+S2 >> [TX] t= 7.542333333333302  node= 2  to= 1  src= 5  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 7.611333333333299  rx= 3  from= 4  src= 8  seq= 2.0  flag= 0 
+S3 >> [FWD] t= 7.611333333333299  node= 3  src= 8  seq= 2.0 
+S3 >> [TX] t= 7.611333333333299  node= 3  to= 2  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 7.638333333333302  rx= 1  from= 2  src= 4  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 7.638333333333302  node= 1  src= 4  seq= 2.0 
+S1 >> [TX] t= 7.638333333333302  node= 1  to= 11  src= 4  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 7.687333333333294  rx= 4  from= 5  src= 10  seq= 2.0  flag= 0 
+S4 >> [FWD] t= 7.687333333333294  node= 4  src= 10  seq= 2.0 
+S4 >> [TX] t= 7.687333333333294  node= 4  to= 3  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 7.703333333333284  src= 4  seq= 2.0  flag= 0  val= 2.0  lat= 1.300999999999978 
+S11 >> [GATEWAY] Nhan Delta tu Node  4  | Do lech Delta:  2.0 
+S2 >> [RX] t= 7.730333333333301  rx= 2  from= 3  src= 6  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 7.730333333333301  node= 2  src= 6  seq= 2.0 
+S2 >> [TX] t= 7.730333333333301  node= 2  to= 1  src= 6  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 7.8263333333333005  rx= 1  from= 2  src= 5  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 7.8263333333333005  node= 1  src= 5  seq= 2.0 
+S1 >> [TX] t= 7.8263333333333005  node= 1  to= 11  src= 5  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 7.860333333333298  rx= 3  from= 4  src= 9  seq= 2.0  flag= 0 
+S3 >> [FWD] t= 7.860333333333298  node= 3  src= 9  seq= 2.0 
+S3 >> [TX] t= 7.860333333333298  node= 3  to= 2  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 7.883333333333283  src= 5  seq= 2.0  flag= 0  val= 0.0  lat= 1.6359999999999761 
+S11 >> [GATEWAY] Nhan Delta tu Node  5  | Do lech Delta:  0.0 
+S2 >> [RX] t= 7.9803333333333  rx= 2  from= 3  src= 7  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 7.9803333333333  node= 2  src= 7  seq= 2.0 
+S2 >> [TX] t= 7.9803333333333  node= 2  to= 1  src= 7  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 8.0283333333333  rx= 1  from= 2  src= 6  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 8.0283333333333  node= 1  src= 6  seq= 2.0 
+S1 >> [TX] t= 8.0283333333333  node= 1  to= 11  src= 6  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 8.083333333333284  src= 6  seq= 2.0  flag= 0  val= 1.0  lat= 2.0979999999999794 
+S11 >> [GATEWAY] Nhan Delta tu Node  6  | Do lech Delta:  1.0 
+S3 >> [RX] t= 8.106333333333298  rx= 3  from= 4  src= 10  seq= 2.0  flag= 0 
+S3 >> [FWD] t= 8.106333333333298  node= 3  src= 10  seq= 2.0 
+S3 >> [TX] t= 8.106333333333298  node= 3  to= 2  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [RX] t= 8.1543333333333  rx= 2  from= 3  src= 8  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 8.1543333333333  node= 2  src= 8  seq= 2.0 
+S2 >> [TX] t= 8.1543333333333  node= 2  to= 1  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 8.2253333333333  rx= 1  from= 2  src= 7  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 8.2253333333333  node= 1  src= 7  seq= 2.0 
+S1 >> [TX] t= 8.2253333333333  node= 1  to= 11  src= 7  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 8.28333333333328  src= 7  seq= 2.0  flag= 0  val= 4.0  lat= 2.4719999999999747 
+S11 >> [GATEWAY] Nhan Delta tu Node  7  | Do lech Delta:  4.0 
+S2 >> [RX] t= 8.361333333333297  rx= 2  from= 3  src= 9  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 8.361333333333297  node= 2  src= 9  seq= 2.0 
+S2 >> [TX] t= 8.361333333333297  node= 2  to= 1  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 8.448333333333297  rx= 1  from= 2  src= 8  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 8.448333333333297  node= 1  src= 8  seq= 2.0 
+S1 >> [TX] t= 8.448333333333297  node= 1  to= 11  src= 8  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 8.503333333333277  src= 8  seq= 2.0  flag= 0  val= 3.0  lat= 2.9929999999999666 
+S11 >> [GATEWAY] Nhan Delta tu Node  8  | Do lech Delta:  3.0 
+S2 >> [RX] t= 8.606333333333293  rx= 2  from= 3  src= 10  seq= 2.0  flag= 0 
+S2 >> [FWD] t= 8.606333333333293  node= 2  src= 10  seq= 2.0 
+S2 >> [TX] t= 8.606333333333293  node= 2  to= 1  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 8.612333333333293  rx= 1  from= 2  src= 9  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 8.612333333333293  node= 1  src= 9  seq= 2.0 
+S1 >> [TX] t= 8.612333333333293  node= 1  to= 11  src= 9  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 8.663333333333274  src= 9  seq= 2.0  flag= 0  val= 0.0  lat= 3.2179999999999627 
+S11 >> [GATEWAY] Nhan Delta tu Node  9  | Do lech Delta:  0.0 
+S1 >> [RX] t= 8.80433333333329  rx= 1  from= 2  src= 10  seq= 2.0  flag= 0 
+S1 >> [FWD] t= 8.80433333333329  node= 1  src= 10  seq= 2.0 
+S1 >> [TX] t= 8.80433333333329  node= 1  to= 11  src= 10  seq= 2.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 8.863333333333271  src= 10  seq= 2.0  flag= 0  val= 4.0  lat= 3.6589999999999607 
+S11 >> [GATEWAY] Nhan Delta tu Node  10  | Do lech Delta:  4.0 
+S10 >> [GEN] t= 10.412333333333248  node= 10  src= 10  seq= 3.0  flag= 0  val= 0.0 
+S10 >> [TX] t= 10.412333333333248  node= 10  to= 9  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S10 >> [BUF] t= 10.568333333333245  node= 10  b= -1 
+S9 >> [GEN] t= 10.849333333333242  node= 9  src= 9  seq= 3.0  flag= 0  val= 0.0 
+S9 >> [TX] t= 10.849333333333242  node= 9  to= 8  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S9 >> [BUF] t= 11.013333333333238  node= 9  b= 53 
+S9 >> [RX] t= 11.013333333333238  rx= 9  from= 10  src= 10  seq= 3.0  flag= 0 
+S9 >> [FWD] t= 11.013333333333238  node= 9  src= 10  seq= 3.0 
+S9 >> [TX] t= 11.013333333333238  node= 9  to= 8  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [GEN] t= 11.052333333333237  node= 8  src= 8  seq= 3.0  flag= 0  val= 2.0 
+S8 >> [TX] t= 11.052333333333237  node= 8  to= 7  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [BUF] t= 11.226333333333237  node= 8  b= 104 
+S8 >> [RX] t= 11.226333333333237  rx= 8  from= 9  src= 9  seq= 3.0  flag= 0 
+S8 >> [FWD] t= 11.226333333333237  node= 8  src= 9  seq= 3.0 
+S8 >> [TX] t= 11.226333333333237  node= 8  to= 7  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S8 >> [RX] t= 11.400333333333233  rx= 8  from= 9  src= 10  seq= 3.0  flag= 0 
+S8 >> [FWD] t= 11.400333333333233  node= 8  src= 10  seq= 3.0 
+S8 >> [TX] t= 11.400333333333233  node= 8  to= 7  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [GEN] t= 11.58633333333323  node= 7  src= 7  seq= 3.0  flag= 0  val= 2.0 
+S7 >> [TX] t= 11.58633333333323  node= 7  to= 6  src= 7  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [BUF] t= 11.829333333333224  node= 7  b= 156 
+S7 >> [RX] t= 11.829333333333224  rx= 7  from= 8  src= 8  seq= 3.0  flag= 0 
+S7 >> [FWD] t= 11.829333333333224  node= 7  src= 8  seq= 3.0 
+S7 >> [TX] t= 11.829333333333224  node= 7  to= 6  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [GEN] t= 11.96533333333322  node= 6  src= 6  seq= 3.0  flag= 0  val= 2.0 
+S6 >> [TX] t= 11.96533333333322  node= 6  to= 5  src= 6  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 11.98633333333322  rx= 7  from= 8  src= 9  seq= 3.0  flag= 0 
+S7 >> [FWD] t= 11.98633333333322  node= 7  src= 9  seq= 3.0 
+S7 >> [TX] t= 11.98633333333322  node= 7  to= 6  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [BUF] t= 12.163333333333215  node= 6  b= 152 
+S6 >> [RX] t= 12.163333333333215  rx= 6  from= 7  src= 7  seq= 3.0  flag= 0 
+S6 >> [FWD] t= 12.163333333333215  node= 6  src= 7  seq= 3.0 
+S6 >> [TX] t= 12.163333333333215  node= 6  to= 5  src= 7  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 12.176333333333217  rx= 7  from= 8  src= 10  seq= 3.0  flag= 0 
+S7 >> [FWD] t= 12.176333333333217  node= 7  src= 10  seq= 3.0 
+S7 >> [TX] t= 12.176333333333217  node= 7  to= 6  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 12.373333333333212  rx= 6  from= 7  src= 8  seq= 3.0  flag= 0 
+S6 >> [FWD] t= 12.373333333333212  node= 6  src= 8  seq= 3.0 
+S6 >> [TX] t= 12.373333333333212  node= 6  to= 5  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [GEN] t= 12.530333333333214  node= 5  src= 5  seq= 3.0  flag= 0  val= 4.0 
+S5 >> [TX] t= 12.530333333333214  node= 5  to= 4  src= 5  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 12.54833333333321  rx= 6  from= 7  src= 9  seq= 3.0  flag= 0 
+S6 >> [FWD] t= 12.54833333333321  node= 6  src= 9  seq= 3.0 
+S6 >> [TX] t= 12.54833333333321  node= 6  to= 5  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [BUF] t= 12.684333333333212  node= 5  b= 203 
+S5 >> [RX] t= 12.684333333333212  rx= 5  from= 6  src= 6  seq= 3.0  flag= 0 
+S5 >> [FWD] t= 12.684333333333212  node= 5  src= 6  seq= 3.0 
+S5 >> [TX] t= 12.684333333333212  node= 5  to= 4  src= 6  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [RX] t= 12.732333333333207  rx= 6  from= 7  src= 10  seq= 3.0  flag= 0 
+S6 >> [FWD] t= 12.732333333333207  node= 6  src= 10  seq= 3.0 
+S6 >> [TX] t= 12.732333333333207  node= 6  to= 5  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 12.847333333333209  rx= 5  from= 6  src= 7  seq= 3.0  flag= 0 
+S5 >> [FWD] t= 12.847333333333209  node= 5  src= 7  seq= 3.0 
+S5 >> [TX] t= 12.847333333333209  node= 5  to= 4  src= 7  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [GEN] t= 12.895333333333213  node= 4  src= 4  seq= 3.0  flag= 0  val= 1.0 
+S4 >> [TX] t= 12.895333333333213  node= 4  to= 3  src= 4  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 13.005333333333207  rx= 5  from= 6  src= 8  seq= 3.0  flag= 0 
+S5 >> [FWD] t= 13.005333333333207  node= 5  src= 8  seq= 3.0 
+S5 >> [TX] t= 13.005333333333207  node= 5  to= 4  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [BUF] t= 13.14433333333321  node= 4  b= 205 
+S4 >> [RX] t= 13.14433333333321  rx= 4  from= 5  src= 5  seq= 3.0  flag= 0 
+S4 >> [FWD] t= 13.14433333333321  node= 4  src= 5  seq= 3.0 
+S4 >> [TX] t= 13.14433333333321  node= 4  to= 3  src= 5  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 13.188333333333203  rx= 5  from= 6  src= 9  seq= 3.0  flag= 0 
+S5 >> [FWD] t= 13.188333333333203  node= 5  src= 9  seq= 3.0 
+S5 >> [TX] t= 13.188333333333203  node= 5  to= 4  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [GEN] t= 13.271333333333217  node= 3  src= 3  seq= 3.0  flag= 0  val= 1.0 
+S3 >> [TX] t= 13.271333333333217  node= 3  to= 2  src= 3  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 13.319333333333207  rx= 4  from= 5  src= 6  seq= 3.0  flag= 0 
+S4 >> [FWD] t= 13.319333333333207  node= 4  src= 6  seq= 3.0 
+S4 >> [TX] t= 13.319333333333207  node= 4  to= 3  src= 6  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [RX] t= 13.357333333333202  rx= 5  from= 6  src= 10  seq= 3.0  flag= 0 
+S5 >> [FWD] t= 13.357333333333202  node= 5  src= 10  seq= 3.0 
+S5 >> [TX] t= 13.357333333333202  node= 5  to= 4  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [BUF] t= 13.427333333333218  node= 3  b= 153 
+S3 >> [RX] t= 13.427333333333218  rx= 3  from= 4  src= 4  seq= 3.0  flag= 0 
+S3 >> [FWD] t= 13.427333333333218  node= 3  src= 4  seq= 3.0 
+S3 >> [TX] t= 13.427333333333218  node= 3  to= 2  src= 4  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 13.556333333333207  rx= 4  from= 5  src= 7  seq= 3.0  flag= 0 
+S4 >> [FWD] t= 13.556333333333207  node= 4  src= 7  seq= 3.0 
+S4 >> [TX] t= 13.556333333333207  node= 4  to= 3  src= 7  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 13.674333333333218  rx= 3  from= 4  src= 5  seq= 3.0  flag= 0 
+S3 >> [FWD] t= 13.674333333333218  node= 3  src= 5  seq= 3.0 
+S3 >> [TX] t= 13.674333333333218  node= 3  to= 2  src= 5  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 13.717333333333206  rx= 4  from= 5  src= 8  seq= 3.0  flag= 0 
+S4 >> [FWD] t= 13.717333333333206  node= 4  src= 8  seq= 3.0 
+S4 >> [TX] t= 13.717333333333206  node= 4  to= 3  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [GEN] t= 13.785333333333218  node= 2  src= 2  seq= 3.0  flag= 0  val= 3.0 
+S2 >> [TX] t= 13.785333333333218  node= 2  to= 1  src= 2  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 13.878333333333213  rx= 3  from= 4  src= 6  seq= 3.0  flag= 0 
+S3 >> [FWD] t= 13.878333333333213  node= 3  src= 6  seq= 3.0 
+S3 >> [TX] t= 13.878333333333213  node= 3  to= 2  src= 6  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [BUF] t= 13.936333333333216  node= 2  b= 206 
+S2 >> [RX] t= 13.936333333333216  rx= 2  from= 3  src= 3  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 13.936333333333216  node= 2  src= 3  seq= 3.0 
+S2 >> [TX] t= 13.936333333333216  node= 2  to= 1  src= 3  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 13.966333333333202  rx= 4  from= 5  src= 9  seq= 3.0  flag= 0 
+S4 >> [FWD] t= 13.966333333333202  node= 4  src= 9  seq= 3.0 
+S4 >> [TX] t= 13.966333333333202  node= 4  to= 3  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [GEN] t= 14.036333333333218  node= 1  src= 1  seq= 3.0  flag= 0  val= 2.0 
+S1 >> [TX] t= 14.036333333333218  node= 1  to= 11  src= 1  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 14.09433333333321  rx= 3  from= 4  src= 7  seq= 3.0  flag= 0 
+S3 >> [FWD] t= 14.09433333333321  node= 3  src= 7  seq= 3.0 
+S3 >> [TX] t= 14.09433333333321  node= 3  to= 2  src= 7  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 14.103333333333179  src= 1  seq= 3.0  flag= 0  val= 2.0  lat= 0.06699999999996109 
+S11 >> [GATEWAY] Nhan Delta tu Node  1  | Do lech Delta:  2.0 
+S2 >> [RX] t= 14.146333333333212  rx= 2  from= 3  src= 4  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 14.146333333333212  node= 2  src= 4  seq= 3.0 
+S2 >> [TX] t= 14.146333333333212  node= 2  to= 1  src= 4  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [RX] t= 14.167333333333199  rx= 4  from= 5  src= 10  seq= 3.0  flag= 0 
+S4 >> [FWD] t= 14.167333333333199  node= 4  src= 10  seq= 3.0 
+S4 >> [TX] t= 14.167333333333199  node= 4  to= 3  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 14.252333333333207  rx= 3  from= 4  src= 8  seq= 3.0  flag= 0 
+S3 >> [FWD] t= 14.252333333333207  node= 3  src= 8  seq= 3.0 
+S3 >> [TX] t= 14.252333333333207  node= 3  to= 2  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [BUF] t= 14.262333333333213  node= 1  b= 155 
+S1 >> [RX] t= 14.262333333333213  rx= 1  from= 2  src= 2  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 14.262333333333213  node= 1  src= 2  seq= 3.0 
+S1 >> [TX] t= 14.262333333333213  node= 1  to= 11  src= 2  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 14.323333333333174  src= 2  seq= 3.0  flag= 0  val= 3.0  lat= 0.5379999999999558 
+S11 >> [GATEWAY] Nhan Delta tu Node  2  | Do lech Delta:  3.0 
+S2 >> [RX] t= 14.348333333333208  rx= 2  from= 3  src= 5  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 14.348333333333208  node= 2  src= 5  seq= 3.0 
+S2 >> [TX] t= 14.348333333333208  node= 2  to= 1  src= 5  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 14.477333333333206  rx= 1  from= 2  src= 3  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 14.477333333333206  node= 1  src= 3  seq= 3.0 
+S1 >> [TX] t= 14.477333333333206  node= 1  to= 11  src= 3  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 14.4843333333332  rx= 3  from= 4  src= 9  seq= 3.0  flag= 0 
+S3 >> [FWD] t= 14.4843333333332  node= 3  src= 9  seq= 3.0 
+S3 >> [TX] t= 14.4843333333332  node= 3  to= 2  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 14.543333333333171  src= 3  seq= 3.0  flag= 0  val= 1.0  lat= 1.271999999999954 
+S11 >> [GATEWAY] Nhan Delta tu Node  3  | Do lech Delta:  1.0 
+S2 >> [RX] t= 14.545333333333206  rx= 2  from= 3  src= 6  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 14.545333333333206  node= 2  src= 6  seq= 3.0 
+S2 >> [TX] t= 14.545333333333206  node= 2  to= 1  src= 6  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 14.6863333333332  rx= 3  from= 4  src= 10  seq= 3.0  flag= 0 
+S3 >> [FWD] t= 14.6863333333332  node= 3  src= 10  seq= 3.0 
+S3 >> [TX] t= 14.6863333333332  node= 3  to= 2  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [RX] t= 14.716333333333205  rx= 2  from= 3  src= 7  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 14.716333333333205  node= 2  src= 7  seq= 3.0 
+S2 >> [TX] t= 14.716333333333205  node= 2  to= 1  src= 7  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 14.722333333333207  rx= 1  from= 2  src= 4  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 14.722333333333207  node= 1  src= 4  seq= 3.0 
+S1 >> [TX] t= 14.722333333333207  node= 1  to= 11  src= 4  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 14.78333333333317  src= 4  seq= 3.0  flag= 0  val= 1.0  lat= 1.8879999999999573 
+S11 >> [GATEWAY] Nhan Delta tu Node  4  | Do lech Delta:  1.0 
+S2 >> [RX] t= 14.883333333333203  rx= 2  from= 3  src= 8  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 14.883333333333203  node= 2  src= 8  seq= 3.0 
+S2 >> [TX] t= 14.883333333333203  node= 2  to= 1  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 14.895333333333204  rx= 1  from= 2  src= 5  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 14.895333333333204  node= 1  src= 5  seq= 3.0 
+S1 >> [TX] t= 14.895333333333204  node= 1  to= 11  src= 5  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 14.963333333333166  src= 5  seq= 3.0  flag= 0  val= 4.0  lat= 2.432999999999952 
+S11 >> [GATEWAY] Nhan Delta tu Node  5  | Do lech Delta:  4.0 
+S2 >> [RX] t= 15.0893333333332  rx= 2  from= 3  src= 9  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 15.0893333333332  node= 2  src= 9  seq= 3.0 
+S2 >> [TX] t= 15.0893333333332  node= 2  to= 1  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 15.115333333333203  rx= 1  from= 2  src= 6  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 15.115333333333203  node= 1  src= 6  seq= 3.0 
+S1 >> [TX] t= 15.115333333333203  node= 1  to= 11  src= 6  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 15.183333333333167  src= 6  seq= 3.0  flag= 0  val= 2.0  lat= 3.2179999999999467 
+S11 >> [GATEWAY] Nhan Delta tu Node  6  | Do lech Delta:  2.0 
+S2 >> [RX] t= 15.2783333333332  rx= 2  from= 3  src= 10  seq= 3.0  flag= 0 
+S2 >> [FWD] t= 15.2783333333332  node= 2  src= 10  seq= 3.0 
+S2 >> [TX] t= 15.2783333333332  node= 2  to= 1  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S1 >> [RX] t= 15.287333333333201  rx= 1  from= 2  src= 7  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 15.287333333333201  node= 1  src= 7  seq= 3.0 
+S1 >> [TX] t= 15.287333333333201  node= 1  to= 11  src= 7  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 15.343333333333163  src= 7  seq= 3.0  flag= 0  val= 2.0  lat= 3.756999999999934 
+S11 >> [GATEWAY] Nhan Delta tu Node  7  | Do lech Delta:  2.0 
+S1 >> [RX] t= 15.524333333333198  rx= 1  from= 2  src= 8  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 15.524333333333198  node= 1  src= 8  seq= 3.0 
+S1 >> [TX] t= 15.524333333333198  node= 1  to= 11  src= 8  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 15.58333333333316  src= 8  seq= 3.0  flag= 0  val= 2.0  lat= 4.530999999999922 
+S11 >> [GATEWAY] Nhan Delta tu Node  8  | Do lech Delta:  2.0 
+S1 >> [RX] t= 15.720333333333194  rx= 1  from= 2  src= 9  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 15.720333333333194  node= 1  src= 9  seq= 3.0 
+S1 >> [TX] t= 15.720333333333194  node= 1  to= 11  src= 9  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 15.783333333333157  src= 9  seq= 3.0  flag= 0  val= 0.0  lat= 4.933999999999916 
+S11 >> [GATEWAY] Nhan Delta tu Node  9  | Do lech Delta:  0.0 
+S1 >> [RX] t= 15.950333333333191  rx= 1  from= 2  src= 10  seq= 3.0  flag= 0 
+S1 >> [FWD] t= 15.950333333333191  node= 1  src= 10  seq= 3.0 
+S1 >> [TX] t= 15.950333333333191  node= 1  to= 11  src= 10  seq= 3.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [GW] t= 16.003333333333156  src= 10  seq= 3.0  flag= 0  val= 0.0  lat= 5.590999999999909 
+S11 >> [GATEWAY] Nhan Delta tu Node  10  | Do lech Delta:  0.0 
+S10 >> [GEN] t= 25.56833333333316  node= 10  src= 10  seq= 4.0  flag= 0  val= 2.0 
+S10 >> [TX] t= 25.56833333333316  node= 10  to= 9  src= 10  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S10 >> [BUF] t= 25.74633333333316  node= 10  b= -1 
+S9 >> [GEN] t= 26.180333333333156  node= 9  src= 9  seq= 4.0  flag= 0  val= 0.0 
+S9 >> [TX] t= 26.180333333333156  node= 9  to= 8  src= 9  seq= 4.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S9 >> [TX] t= 26.46733333333315  node= 9  to= 8  src= 9  seq= 4.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S8 >> [GEN] t= 26.610333333333152  node= 8  src= 8  seq= 4.0  flag= 0  val= 1.0 
+S8 >> [TX] t= 26.610333333333152  node= 8  to= 7  src= 8  seq= 4.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S9 >> [BUF] t= 26.71633333333315  node= 9  b= 51 
+S9 >> [DROP] t= 26.71633333333315  rx= 9  from= 10  src= 10  seq= 4.0  flag= 0  p= 25  cause= RAIN 
+S8 >> [TX] t= 26.945333333333146  node= 8  to= 7  src= 8  seq= 4.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S8 >> [BUF] t= 27.195333333333142  node= 8  b= 101 
+S8 >> [RX] t= 27.195333333333142  rx= 8  from= 9  src= 9  seq= 4.0  flag= 0 
+S8 >> [FWD] t= 27.195333333333142  node= 8  src= 9  seq= 4.0 
+S8 >> [TX] t= 27.195333333333142  node= 8  to= 7  src= 9  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [GEN] t= 27.338333333333143  node= 7  src= 7  seq= 4.0  flag= 100  val= 42.0 
+S7 >> [TX] t= 27.338333333333143  node= 7  to= 6  src= 7  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S8 >> [RX] t= 27.356333333333144  rx= 8  from= 9  src= 9  seq= 4.0  flag= 0 
+S8 >> [DUP] t= 27.356333333333144  rx= 8  src= 9  seq= 4.0 
+S7 >> [TX] t= 27.505333333333144  node= 7  to= 6  src= 7  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S7 >> [BUF] t= 27.69133333333314  node= 7  b= 155 
+S7 >> [RX] t= 27.69133333333314  rx= 7  from= 8  src= 8  seq= 4.0  flag= 0 
+S7 >> [FWD] t= 27.69133333333314  node= 7  src= 8  seq= 4.0 
+S7 >> [TX] t= 27.69133333333314  node= 7  to= 6  src= 8  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 27.865333333333137  rx= 7  from= 8  src= 8  seq= 4.0  flag= 0 
+S7 >> [DUP] t= 27.865333333333137  rx= 7  src= 8  seq= 4.0 
+S7 >> [RX] t= 27.865333333333137  rx= 7  from= 8  src= 9  seq= 4.0  flag= 0 
+S7 >> [FWD] t= 27.865333333333137  node= 7  src= 9  seq= 4.0 
+S7 >> [TX] t= 27.865333333333137  node= 7  to= 6  src= 9  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [GEN] t= 27.967333333333137  node= 6  src= 6  seq= 4.0  flag= 100  val= 41.0 
+S6 >> [TX] t= 27.967333333333137  node= 6  to= 5  src= 6  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S6 >> [TX] t= 28.285333333333128  node= 6  to= 5  src= 6  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S6 >> [BUF] t= 28.439333333333128  node= 6  b= 212 
+S6 >> [DROP] t= 28.439333333333128  rx= 6  from= 7  src= 7  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S6 >> [RX] t= 28.439333333333128  rx= 6  from= 7  src= 7  seq= 4.0  flag= 100 
+S6 >> [FWD] t= 28.439333333333128  node= 6  src= 7  seq= 4.0 
+S6 >> [TX] t= 28.439333333333128  node= 6  to= 5  src= 7  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S5 >> [GEN] t= 28.51533333333314  node= 5  src= 5  seq= 4.0  flag= 100  val= 40.0 
+S5 >> [TX] t= 28.51533333333314  node= 5  to= 4  src= 5  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S6 >> [TX] t= 28.63033333333313  node= 6  to= 5  src= 7  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S5 >> [TX] t= 28.822333333333138  node= 5  to= 4  src= 5  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S6 >> [RX] t= 28.85933333333313  rx= 6  from= 7  src= 8  seq= 4.0  flag= 0 
+S6 >> [FWD] t= 28.85933333333313  node= 6  src= 8  seq= 4.0 
+S6 >> [TX] t= 28.85933333333313  node= 6  to= 5  src= 8  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S5 >> [BUF] t= 29.029333333333142  node= 5  b= 269 
+S5 >> [RX] t= 29.029333333333142  rx= 5  from= 6  src= 6  seq= 4.0  flag= 100 
+S5 >> [FWD] t= 29.029333333333142  node= 5  src= 6  seq= 4.0 
+S5 >> [TX] t= 29.029333333333142  node= 5  to= 4  src= 6  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S6 >> [DROP] t= 29.04633333333313  rx= 6  from= 7  src= 9  seq= 4.0  flag= 0  p= 25  cause= RAIN 
+S4 >> [GEN] t= 29.350333333333147  node= 4  src= 4  seq= 4.0  flag= 100  val= 42.0 
+S4 >> [TX] t= 29.350333333333147  node= 4  to= 3  src= 4  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S5 >> [TX] t= 29.412333333333137  node= 5  to= 4  src= 6  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S5 >> [RX] t= 29.601333333333137  rx= 5  from= 6  src= 6  seq= 4.0  flag= 100 
+S5 >> [DUP] t= 29.601333333333137  rx= 5  src= 6  seq= 4.0 
+S5 >> [RX] t= 29.601333333333137  rx= 5  from= 6  src= 7  seq= 4.0  flag= 100 
+S5 >> [FWD] t= 29.601333333333137  node= 5  src= 7  seq= 4.0 
+S5 >> [TX] t= 29.601333333333137  node= 5  to= 4  src= 7  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S4 >> [TX] t= 29.676333333333147  node= 4  to= 3  src= 4  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S5 >> [TX] t= 29.757333333333136  node= 5  to= 4  src= 7  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S3 >> [GEN] t= 29.89533333333316  node= 3  src= 3  seq= 4.0  flag= 0  val= 1.0 
+S3 >> [TX] t= 29.89533333333316  node= 3  to= 2  src= 3  seq= 4.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S4 >> [BUF] t= 29.919333333333142  node= 4  b= 327 
+S4 >> [RX] t= 29.919333333333142  rx= 4  from= 5  src= 5  seq= 4.0  flag= 100 
+S4 >> [FWD] t= 29.919333333333142  node= 4  src= 5  seq= 4.0 
+S4 >> [TX] t= 29.919333333333142  node= 4  to= 3  src= 5  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S5 >> [RX] t= 29.926333333333133  rx= 5  from= 6  src= 7  seq= 4.0  flag= 100 
+S5 >> [DUP] t= 29.926333333333133  rx= 5  src= 7  seq= 4.0 
+S5 >> [RX] t= 29.926333333333133  rx= 5  from= 6  src= 8  seq= 4.0  flag= 0 
+S5 >> [FWD] t= 29.926333333333133  node= 5  src= 8  seq= 4.0 
+S5 >> [TX] t= 29.926333333333133  node= 5  to= 4  src= 8  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [TX] t= 30.10033333333314  node= 4  to= 3  src= 5  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S3 >> [TX] t= 30.195333333333153  node= 3  to= 2  src= 3  seq= 4.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S4 >> [RX] t= 30.314333333333135  rx= 4  from= 5  src= 5  seq= 4.0  flag= 100 
+S4 >> [DUP] t= 30.314333333333135  rx= 4  src= 5  seq= 4.0 
+S4 >> [RX] t= 30.314333333333135  rx= 4  from= 5  src= 6  seq= 4.0  flag= 100 
+S4 >> [FWD] t= 30.314333333333135  node= 4  src= 6  seq= 4.0 
+S4 >> [TX] t= 30.314333333333135  node= 4  to= 3  src= 6  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S3 >> [BUF] t= 30.43333333333315  node= 3  b= 271 
+S3 >> [RX] t= 30.43333333333315  rx= 3  from= 4  src= 4  seq= 4.0  flag= 100 
+S3 >> [FWD] t= 30.43333333333315  node= 3  src= 4  seq= 4.0 
+S3 >> [TX] t= 30.43333333333315  node= 3  to= 2  src= 4  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S2 >> [GEN] t= 30.506333333333156  node= 2  src= 2  seq= 4.0  flag= 0  val= 3.0 
+S2 >> [TX] t= 30.506333333333156  node= 2  to= 1  src= 2  seq= 4.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S4 >> [TX] t= 30.61833333333313  node= 4  to= 3  src= 6  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S2 >> [TX] t= 30.620333333333157  node= 2  to= 1  src= 2  seq= 4.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S3 >> [TX] t= 30.780333333333143  node= 3  to= 2  src= 4  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S4 >> [RX] t= 30.819333333333127  rx= 4  from= 5  src= 6  seq= 4.0  flag= 100 
+S4 >> [DUP] t= 30.819333333333127  rx= 4  src= 6  seq= 4.0 
+S4 >> [RX] t= 30.819333333333127  rx= 4  from= 5  src= 7  seq= 4.0  flag= 100 
+S4 >> [FWD] t= 30.819333333333127  node= 4  src= 7  seq= 4.0 
+S4 >> [TX] t= 30.819333333333127  node= 4  to= 3  src= 7  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S2 >> [BUF] t= 30.839333333333155  node= 2  b= 210 
+S2 >> [RX] t= 30.839333333333155  rx= 2  from= 3  src= 3  seq= 4.0  flag= 0 
+S2 >> [FWD] t= 30.839333333333155  node= 2  src= 3  seq= 4.0 
+S2 >> [TX] t= 30.839333333333155  node= 2  to= 1  src= 3  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [RX] t= 30.93033333333314  rx= 3  from= 4  src= 4  seq= 4.0  flag= 100 
+S3 >> [DUP] t= 30.93033333333314  rx= 3  src= 4  seq= 4.0 
+S3 >> [RX] t= 30.93033333333314  rx= 3  from= 4  src= 5  seq= 4.0  flag= 100 
+S3 >> [FWD] t= 30.93033333333314  node= 3  src= 5  seq= 4.0 
+S3 >> [TX] t= 30.93033333333314  node= 3  to= 2  src= 5  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S4 >> [TX] t= 30.948333333333125  node= 4  to= 3  src= 7  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S2 >> [RX] t= 31.03533333333315  rx= 2  from= 3  src= 3  seq= 4.0  flag= 0 
+S2 >> [DUP] t= 31.03533333333315  rx= 2  src= 3  seq= 4.0 
+S2 >> [RX] t= 31.03533333333315  rx= 2  from= 3  src= 4  seq= 4.0  flag= 100 
+S2 >> [FWD] t= 31.03533333333315  node= 2  src= 4  seq= 4.0 
+S2 >> [TX] t= 31.03533333333315  node= 2  to= 1  src= 4  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S1 >> [GEN] t= 31.13633333333315  node= 1  src= 1  seq= 4.0  flag= 0  val= 1.0 
+S1 >> [TX] t= 31.13633333333315  node= 1  to= 11  src= 1  seq= 4.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S2 >> [TX] t= 31.155333333333147  node= 2  to= 1  src= 4  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S4 >> [RX] t= 31.19333333333312  rx= 4  from= 5  src= 7  seq= 4.0  flag= 100 
+S4 >> [DUP] t= 31.19333333333312  rx= 4  src= 7  seq= 4.0 
+S4 >> [DROP] t= 31.19333333333312  rx= 4  from= 5  src= 8  seq= 4.0  flag= 0  p= 25  cause= RAIN 
+S11 >> [DROP] t= 31.203333333332882  rx= 11  from= 1  src= 1  seq= 4.0  flag= 0  p= 25  cause= RAIN 
+S3 >> [TX] t= 31.211333333333133  node= 3  to= 2  src= 5  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S1 >> [TX] t= 31.351333333333145  node= 1  to= 11  src= 1  seq= 4.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S3 >> [RX] t= 31.367333333333132  rx= 3  from= 4  src= 5  seq= 4.0  flag= 100 
+S3 >> [DUP] t= 31.367333333333132  rx= 3  src= 5  seq= 4.0 
+S3 >> [RX] t= 31.367333333333132  rx= 3  from= 4  src= 6  seq= 4.0  flag= 100 
+S3 >> [FWD] t= 31.367333333333132  node= 3  src= 6  seq= 4.0 
+S3 >> [TX] t= 31.367333333333132  node= 3  to= 2  src= 6  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S2 >> [RX] t= 31.381333333333142  rx= 2  from= 3  src= 4  seq= 4.0  flag= 100 
+S2 >> [DUP] t= 31.381333333333142  rx= 2  src= 4  seq= 4.0 
+S2 >> [RX] t= 31.381333333333142  rx= 2  from= 3  src= 5  seq= 4.0  flag= 100 
+S2 >> [FWD] t= 31.381333333333142  node= 2  src= 5  seq= 4.0 
+S2 >> [TX] t= 31.381333333333142  node= 2  to= 1  src= 5  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S11 >> [GW] t= 31.403333333332878  src= 1  seq= 4.0  flag= 0  val= 1.0  lat= 0.05199999999973315 
+S11 >> [GATEWAY] Nhan Delta tu Node  1  | Do lech Delta:  1.0 
+S1 >> [BUF] t= 31.58633333333314  node= 1  b= 317 
+S1 >> [DROP] t= 31.58633333333314  rx= 1  from= 2  src= 2  seq= 4.0  flag= 0  p= 25  cause= RAIN 
+S1 >> [RX] t= 31.58633333333314  rx= 1  from= 2  src= 2  seq= 4.0  flag= 0 
+S1 >> [FWD] t= 31.58633333333314  node= 1  src= 2  seq= 4.0 
+S1 >> [TX] t= 31.58633333333314  node= 1  to= 11  src= 2  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [TX] t= 31.62633333333314  node= 2  to= 1  src= 5  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [DROP] t= 31.643333333332873  rx= 11  from= 1  src= 2  seq= 4.0  flag= 0  p= 25  cause= RAIN 
+S3 >> [TX] t= 31.733333333333125  node= 3  to= 2  src= 6  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S1 >> [RX] t= 31.776333333333135  rx= 1  from= 2  src= 3  seq= 4.0  flag= 0 
+S1 >> [FWD] t= 31.776333333333135  node= 1  src= 3  seq= 4.0 
+S1 >> [TX] t= 31.776333333333135  node= 1  to= 11  src= 3  seq= 4.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [RX] t= 31.816333333333134  rx= 2  from= 3  src= 5  seq= 4.0  flag= 100 
+S2 >> [DUP] t= 31.816333333333134  rx= 2  src= 5  seq= 4.0 
+S2 >> [DROP] t= 31.816333333333134  rx= 2  from= 3  src= 6  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S2 >> [RX] t= 31.816333333333134  rx= 2  from= 3  src= 6  seq= 4.0  flag= 100 
+S2 >> [FWD] t= 31.816333333333134  node= 2  src= 6  seq= 4.0 
+S2 >> [TX] t= 31.816333333333134  node= 2  to= 1  src= 6  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S11 >> [DROP] t= 31.84333333333287  rx= 11  from= 1  src= 3  seq= 4.0  flag= 0  p= 25  cause= RAIN 
+S3 >> [RX] t= 31.92533333333312  rx= 3  from= 4  src= 6  seq= 4.0  flag= 100 
+S3 >> [DUP] t= 31.92533333333312  rx= 3  src= 6  seq= 4.0 
+S3 >> [RX] t= 31.92533333333312  rx= 3  from= 4  src= 7  seq= 4.0  flag= 100 
+S3 >> [FWD] t= 31.92533333333312  node= 3  src= 7  seq= 4.0 
+S3 >> [TX] t= 31.92533333333312  node= 3  to= 2  src= 7  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S1 >> [DROP] t= 31.935333333333134  rx= 1  from= 2  src= 4  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S1 >> [DROP] t= 31.935333333333134  rx= 1  from= 2  src= 4  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S1 >> [RX] t= 31.935333333333134  rx= 1  from= 2  src= 5  seq= 4.0  flag= 100 
+S1 >> [FWD] t= 31.935333333333134  node= 1  src= 5  seq= 4.0 
+S1 >> [TX] t= 31.935333333333134  node= 1  to= 11  src= 5  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S2 >> [TX] t= 31.945333333333135  node= 2  to= 1  src= 6  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [GW] t= 32.00333333333287  src= 5  seq= 4.0  flag= 100  val= 40.0  lat= 3.4879999999997295 
+S11 >> >>> [GATEWAY - CANH BAO] Phat hien MUA TO tai Node  5  | Do am:  40.0  <<< 
+S3 >> [TX] t= 32.08033333333313  node= 3  to= 2  src= 7  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S2 >> [DROP] t= 32.11133333333314  rx= 2  from= 3  src= 7  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S3 >> [DROP] t= 32.30433333333316  rx= 3  from= 4  src= 7  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S1 >> [TX] t= 32.308333333333174  node= 1  to= 11  src= 5  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [DUP] t= 32.36333333333291  rx= 11  src= 5  seq= 4.0 
+S1 >> [RX] t= 32.5053333333332  rx= 1  from= 2  src= 5  seq= 4.0  flag= 100 
+S1 >> [DUP] t= 32.5053333333332  rx= 1  src= 5  seq= 4.0 
+S1 >> [DROP] t= 32.5053333333332  rx= 1  from= 2  src= 6  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S1 >> [RX] t= 32.5053333333332  rx= 1  from= 2  src= 6  seq= 4.0  flag= 100 
+S1 >> [FWD] t= 32.5053333333332  node= 1  src= 6  seq= 4.0 
+S1 >> [TX] t= 32.5053333333332  node= 1  to= 11  src= 6  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S11 >> [GW] t= 32.563333333332935  src= 6  seq= 4.0  flag= 100  val= 41.0  lat= 4.595999999999798 
+S11 >> >>> [GATEWAY - CANH BAO] Phat hien MUA TO tai Node  6  | Do am:  41.0  <<< 
+S1 >> [TX] t= 32.82933333333324  node= 1  to= 11  src= 6  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [DUP] t= 32.88333333333298  rx= 11  src= 6  seq= 4.0 
+S10 >> [GEN] t= 40.74633333333458  node= 10  src= 10  seq= 5.0  flag= 0  val= 0.0 
+S10 >> [TX] t= 40.74633333333458  node= 10  to= 9  src= 10  seq= 5.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S10 >> [TX] t= 41.11433333333463  node= 10  to= 9  src= 10  seq= 5.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S10 >> [BUF] t= 41.34233333333465  node= 10  b= -1 
+S9 >> [GEN] t= 41.71633333333472  node= 9  src= 9  seq= 5.0  flag= 0  val= 0.0 
+S9 >> [TX] t= 41.71633333333472  node= 9  to= 8  src= 9  seq= 5.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S9 >> [TX] t= 42.01933333333476  node= 9  to= 8  src= 9  seq= 5.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S9 >> [BUF] t= 42.21733333333478  node= 9  b= 103 
+S9 >> [DROP] t= 42.21733333333478  rx= 9  from= 10  src= 10  seq= 5.0  flag= 0  p= 25  cause= RAIN 
+S9 >> [DROP] t= 42.21733333333478  rx= 9  from= 10  src= 10  seq= 5.0  flag= 0  p= 25  cause= RAIN 
+S8 >> [GEN] t= 42.3563333333348  node= 8  src= 8  seq= 5.0  flag= 0  val= 2.0 
+S8 >> [TX] t= 42.3563333333348  node= 8  to= 7  src= 8  seq= 5.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S8 >> [TX] t= 42.67633333333485  node= 8  to= 7  src= 8  seq= 5.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S8 >> [BUF] t= 42.88733333333489  node= 8  b= 99 
+S8 >> [RX] t= 42.88733333333489  rx= 8  from= 9  src= 9  seq= 5.0  flag= 0 
+S8 >> [FWD] t= 42.88733333333489  node= 8  src= 9  seq= 5.0 
+S8 >> [TX] t= 42.88733333333489  node= 8  to= 7  src= 9  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [GEN] t= 43.01833333333491  node= 7  src= 7  seq= 5.0  flag= 100  val= 42.0 
+S7 >> [TX] t= 43.01833333333491  node= 7  to= 6  src= 7  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S8 >> [RX] t= 43.07633333333491  rx= 8  from= 9  src= 9  seq= 5.0  flag= 0 
+S8 >> [DUP] t= 43.07633333333491  rx= 8  src= 9  seq= 5.0 
+S7 >> [TX] t= 43.32033333333494  node= 7  to= 6  src= 7  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S7 >> [BUF] t= 43.56333333333498  node= 7  b= 147 
+S7 >> [RX] t= 43.56333333333498  rx= 7  from= 8  src= 8  seq= 5.0  flag= 0 
+S7 >> [FWD] t= 43.56333333333498  node= 7  src= 8  seq= 5.0 
+S7 >> [TX] t= 43.56333333333498  node= 7  to= 6  src= 8  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S7 >> [RX] t= 43.775333333335006  rx= 7  from= 8  src= 8  seq= 5.0  flag= 0 
+S7 >> [DUP] t= 43.775333333335006  rx= 7  src= 8  seq= 5.0 
+S7 >> [RX] t= 43.775333333335006  rx= 7  from= 8  src= 9  seq= 5.0  flag= 0 
+S7 >> [FWD] t= 43.775333333335006  node= 7  src= 9  seq= 5.0 
+S7 >> [TX] t= 43.775333333335006  node= 7  to= 6  src= 9  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [GEN] t= 44.04633333333505  node= 6  src= 6  seq= 5.0  flag= 100  val= 41.0 
+S6 >> [TX] t= 44.04633333333505  node= 6  to= 5  src= 6  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S6 >> [TX] t= 44.21433333333507  node= 6  to= 5  src= 6  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S6 >> [BUF] t= 44.411333333335094  node= 6  b= 205 
+S6 >> [RX] t= 44.411333333335094  rx= 6  from= 7  src= 7  seq= 5.0  flag= 100 
+S6 >> [FWD] t= 44.411333333335094  node= 6  src= 7  seq= 5.0 
+S6 >> [TX] t= 44.411333333335094  node= 6  to= 5  src= 7  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S6 >> [TX] t= 44.66633333333513  node= 6  to= 5  src= 7  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S6 >> [RX] t= 44.84033333333515  rx= 6  from= 7  src= 7  seq= 5.0  flag= 100 
+S6 >> [DUP] t= 44.84033333333515  rx= 6  src= 7  seq= 5.0 
+S6 >> [RX] t= 44.84033333333515  rx= 6  from= 7  src= 8  seq= 5.0  flag= 0 
+S6 >> [FWD] t= 44.84033333333515  node= 6  src= 8  seq= 5.0 
+S6 >> [TX] t= 44.84033333333515  node= 6  to= 5  src= 8  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S6 >> [DROP] t= 45.071333333335176  rx= 6  from= 7  src= 9  seq= 5.0  flag= 0  p= 25  cause= RAIN 
+S5 >> [GEN] t= 45.094333333335186  node= 5  src= 5  seq= 5.0  flag= 100  val= 44.0 
+S5 >> [TX] t= 45.094333333335186  node= 5  to= 4  src= 5  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S5 >> [TX] t= 45.31233333333522  node= 5  to= 4  src= 5  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S5 >> [BUF] t= 45.50333333333525  node= 5  b= 261 
+S5 >> [RX] t= 45.50333333333525  rx= 5  from= 6  src= 6  seq= 5.0  flag= 100 
+S5 >> [FWD] t= 45.50333333333525  node= 5  src= 6  seq= 5.0 
+S5 >> [TX] t= 45.50333333333525  node= 5  to= 4  src= 6  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S5 >> [TX] t= 45.75033333333527  node= 5  to= 4  src= 6  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S5 >> [RX] t= 45.950333333335294  rx= 5  from= 6  src= 6  seq= 5.0  flag= 100 
+S5 >> [DUP] t= 45.950333333335294  rx= 5  src= 6  seq= 5.0 
+S5 >> [RX] t= 45.950333333335294  rx= 5  from= 6  src= 7  seq= 5.0  flag= 100 
+S5 >> [FWD] t= 45.950333333335294  node= 5  src= 7  seq= 5.0 
+S5 >> [TX] t= 45.950333333335294  node= 5  to= 4  src= 7  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S4 >> [GEN] t= 46.19333333333536  node= 4  src= 4  seq= 5.0  flag= 100  val= 41.0 
+S4 >> [TX] t= 46.19333333333536  node= 4  to= 3  src= 4  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S5 >> [TX] t= 46.280333333335335  node= 5  to= 4  src= 7  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S4 >> [TX] t= 46.35133333333537  node= 4  to= 3  src= 4  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S5 >> [RX] t= 46.50533333333536  rx= 5  from= 6  src= 7  seq= 5.0  flag= 100 
+S5 >> [DUP] t= 46.50533333333536  rx= 5  src= 7  seq= 5.0 
+S5 >> [RX] t= 46.50533333333536  rx= 5  from= 6  src= 8  seq= 5.0  flag= 0 
+S5 >> [FWD] t= 46.50533333333536  node= 5  src= 8  seq= 5.0 
+S5 >> [TX] t= 46.50533333333536  node= 5  to= 4  src= 8  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S4 >> [BUF] t= 46.562333333335395  node= 4  b= 370 
+S4 >> [RX] t= 46.562333333335395  rx= 4  from= 5  src= 5  seq= 5.0  flag= 100 
+S4 >> [FWD] t= 46.562333333335395  node= 4  src= 5  seq= 5.0 
+S4 >> [TX] t= 46.562333333335395  node= 4  to= 3  src= 5  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S4 >> [TX] t= 46.72533333333542  node= 4  to= 3  src= 5  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S4 >> [RX] t= 46.96333333333544  rx= 4  from= 5  src= 5  seq= 5.0  flag= 100 
+S4 >> [DUP] t= 46.96333333333544  rx= 4  src= 5  seq= 5.0 
+S4 >> [RX] t= 46.96333333333544  rx= 4  from= 5  src= 6  seq= 5.0  flag= 100 
+S4 >> [FWD] t= 46.96333333333544  node= 4  src= 6  seq= 5.0 
+S4 >> [TX] t= 46.96333333333544  node= 4  to= 3  src= 6  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S2 >> [GEN] t= 47.111333333335494  node= 2  src= 2  seq= 5.0  flag= 0  val= 2.0 
+S2 >> [TX] t= 47.111333333335494  node= 2  to= 1  src= 2  seq= 5.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S4 >> [TX] t= 47.218333333335465  node= 4  to= 3  src= 6  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S2 >> [TX] t= 47.293333333335504  node= 2  to= 1  src= 2  seq= 5.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S3 >> [GEN] t= 47.30433333333549  node= 3  src= 3  seq= 5.0  flag= 0  val= 1.0 
+S3 >> [TX] t= 47.30433333333549  node= 3  to= 2  src= 3  seq= 5.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S4 >> [RX] t= 47.397333333335474  rx= 4  from= 5  src= 6  seq= 5.0  flag= 100 
+S4 >> [DUP] t= 47.397333333335474  rx= 4  src= 6  seq= 5.0 
+S4 >> [RX] t= 47.397333333335474  rx= 4  from= 5  src= 7  seq= 5.0  flag= 100 
+S4 >> [FWD] t= 47.397333333335474  node= 4  src= 7  seq= 5.0 
+S4 >> [TX] t= 47.397333333335474  node= 4  to= 3  src= 7  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S2 >> [BUF] t= 47.49533333333553  node= 2  b= 103 
+S2 >> [RX] t= 47.49533333333553  rx= 2  from= 3  src= 7  seq= 4.0  flag= 100 
+S2 >> [FWD] t= 47.49533333333553  node= 2  src= 7  seq= 4.0 
+S2 >> [TX] t= 47.49533333333553  node= 2  to= 1  src= 7  seq= 4.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S3 >> [TX] t= 47.57433333333553  node= 3  to= 2  src= 3  seq= 5.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S4 >> [TX] t= 47.62233333333551  node= 4  to= 3  src= 7  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S2 >> [TX] t= 47.644333333335545  node= 2  to= 1  src= 7  seq= 4.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S3 >> [BUF] t= 47.76433333333554  node= 3  b= 428 
+S3 >> [RX] t= 47.76433333333554  rx= 3  from= 4  src= 4  seq= 5.0  flag= 100 
+S3 >> [FWD] t= 47.76433333333554  node= 3  src= 4  seq= 5.0 
+S3 >> [TX] t= 47.76433333333554  node= 3  to= 2  src= 4  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S4 >> [RX] t= 47.78333333333551  rx= 4  from= 5  src= 7  seq= 5.0  flag= 100 
+S4 >> [DUP] t= 47.78333333333551  rx= 4  src= 7  seq= 5.0 
+S4 >> [RX] t= 47.78333333333551  rx= 4  from= 5  src= 8  seq= 5.0  flag= 0 
+S4 >> [FWD] t= 47.78333333333551  node= 4  src= 8  seq= 5.0 
+S4 >> [TX] t= 47.78333333333551  node= 4  to= 3  src= 8  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [RX] t= 47.80833333333555  rx= 2  from= 3  src= 3  seq= 5.0  flag= 0 
+S2 >> [FWD] t= 47.80833333333555  node= 2  src= 3  seq= 5.0 
+S2 >> [TX] t= 47.80833333333555  node= 2  to= 1  src= 3  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S3 >> [TX] t= 47.977333333335544  node= 3  to= 2  src= 4  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S2 >> [RX] t= 48.00933333333556  rx= 2  from= 3  src= 3  seq= 5.0  flag= 0 
+S2 >> [DUP] t= 48.00933333333556  rx= 2  src= 3  seq= 5.0 
+S2 >> [RX] t= 48.00933333333556  rx= 2  from= 3  src= 4  seq= 5.0  flag= 100 
+S2 >> [FWD] t= 48.00933333333556  node= 2  src= 4  seq= 5.0 
+S2 >> [TX] t= 48.00933333333556  node= 2  to= 1  src= 4  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S1 >> [GEN] t= 48.02233333333556  node= 1  src= 1  seq= 5.0  flag= 0  val= 3.0 
+S1 >> [TX] t= 48.02233333333556  node= 1  to= 11  src= 1  seq= 5.0  flag= 0  copy= 1.0 / 2  bypass= 0 
+S11 >> [GW] t= 48.08333333333508  src= 1  seq= 5.0  flag= 0  val= 3.0  lat= 0.060999999999516774 
+S11 >> [GATEWAY] Nhan Delta tu Node  1  | Do lech Delta:  3.0 
+S3 >> [RX] t= 48.17333333333557  rx= 3  from= 4  src= 4  seq= 5.0  flag= 100 
+S3 >> [DUP] t= 48.17333333333557  rx= 3  src= 4  seq= 5.0 
+S3 >> [RX] t= 48.17333333333557  rx= 3  from= 4  src= 5  seq= 5.0  flag= 100 
+S3 >> [FWD] t= 48.17333333333557  node= 3  src= 5  seq= 5.0 
+S3 >> [TX] t= 48.17333333333557  node= 3  to= 2  src= 5  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S3 >> [TX] t= 48.29033333333558  node= 3  to= 2  src= 5  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S1 >> [TX] t= 48.3263333333356  node= 1  to= 11  src= 1  seq= 5.0  flag= 0  copy= 2.0 / 2  bypass= 0 
+S2 >> [TX] t= 48.342333333335596  node= 2  to= 1  src= 4  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [DUP] t= 48.383333333335116  rx= 11  src= 1  seq= 5.0 
+S2 >> [RX] t= 48.49633333333562  rx= 2  from= 3  src= 4  seq= 5.0  flag= 100 
+S2 >> [DUP] t= 48.49633333333562  rx= 2  src= 4  seq= 5.0 
+S2 >> [DROP] t= 48.49633333333562  rx= 2  from= 3  src= 5  seq= 5.0  flag= 100  p= 25  cause= RAIN 
+S2 >> [RX] t= 48.49633333333562  rx= 2  from= 3  src= 5  seq= 5.0  flag= 100 
+S2 >> [FWD] t= 48.49633333333562  node= 2  src= 5  seq= 5.0 
+S2 >> [TX] t= 48.49633333333562  node= 2  to= 1  src= 5  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S3 >> [DROP] t= 48.520333333335614  rx= 3  from= 4  src= 5  seq= 5.0  flag= 100  p= 25  cause= RAIN 
+S3 >> [RX] t= 48.520333333335614  rx= 3  from= 4  src= 6  seq= 5.0  flag= 100 
+S3 >> [FWD] t= 48.520333333335614  node= 3  src= 6  seq= 5.0 
+S3 >> [TX] t= 48.520333333335614  node= 3  to= 2  src= 6  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S1 >> [BUF] t= 48.524333333335626  node= 1  b= 369 
+S1 >> [RX] t= 48.524333333335626  rx= 1  from= 2  src= 2  seq= 5.0  flag= 0 
+S1 >> [FWD] t= 48.524333333335626  node= 1  src= 2  seq= 5.0 
+S1 >> [TX] t= 48.524333333335626  node= 1  to= 11  src= 2  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S11 >> [DROP] t= 48.58333333333514  rx= 11  from= 1  src= 2  seq= 5.0  flag= 0  p= 25  cause= RAIN 
+S1 >> [DROP] t= 48.69733333333564  rx= 1  from= 2  src= 2  seq= 5.0  flag= 0  p= 25  cause= RAIN 
+S1 >> [DROP] t= 48.69733333333564  rx= 1  from= 2  src= 7  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S1 >> [DROP] t= 48.69733333333564  rx= 1  from= 2  src= 7  seq= 4.0  flag= 100  p= 25  cause= RAIN 
+S1 >> [RX] t= 48.69733333333564  rx= 1  from= 2  src= 3  seq= 5.0  flag= 0 
+S1 >> [FWD] t= 48.69733333333564  node= 1  src= 3  seq= 5.0 
+S1 >> [TX] t= 48.69733333333564  node= 1  to= 11  src= 3  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [TX] t= 48.723333333335646  node= 2  to= 1  src= 5  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [GW] t= 48.76333333333516  src= 3  seq= 5.0  flag= 0  val= 1.0  lat= 1.4589999999996692 
+S11 >> [GATEWAY] Nhan Delta tu Node  3  | Do lech Delta:  1.0 
+S3 >> [TX] t= 48.84733333333565  node= 3  to= 2  src= 6  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S2 >> [DROP] t= 48.89933333333566  rx= 2  from= 3  src= 6  seq= 5.0  flag= 100  p= 25  cause= RAIN 
+S2 >> [RX] t= 48.89933333333566  rx= 2  from= 3  src= 6  seq= 5.0  flag= 100 
+S2 >> [FWD] t= 48.89933333333566  node= 2  src= 6  seq= 5.0 
+S2 >> [TX] t= 48.89933333333566  node= 2  to= 1  src= 6  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S1 >> [RX] t= 48.93833333333567  rx= 1  from= 2  src= 4  seq= 5.0  flag= 100 
+S1 >> [FWD] t= 48.93833333333567  node= 1  src= 4  seq= 5.0 
+S1 >> [TX] t= 48.93833333333567  node= 1  to= 11  src= 4  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S11 >> [GW] t= 49.00333333333519  src= 4  seq= 5.0  flag= 100  val= 41.0  lat= 2.8099999999998317 
+S11 >> >>> [GATEWAY - CANH BAO] Phat hien MUA TO tai Node  4  | Do am:  41.0  <<< 
+S3 >> [RX] t= 49.046333333335674  rx= 3  from= 4  src= 6  seq= 5.0  flag= 100 
+S3 >> [DUP] t= 49.046333333335674  rx= 3  src= 6  seq= 5.0 
+S3 >> [DROP] t= 49.046333333335674  rx= 3  from= 4  src= 7  seq= 5.0  flag= 100  p= 25  cause= RAIN 
+S3 >> [DROP] t= 49.046333333335674  rx= 3  from= 4  src= 7  seq= 5.0  flag= 100  p= 25  cause= RAIN 
+S3 >> [RX] t= 49.046333333335674  rx= 3  from= 4  src= 8  seq= 5.0  flag= 0 
+S3 >> [FWD] t= 49.046333333335674  node= 3  src= 8  seq= 5.0 
+S3 >> [TX] t= 49.046333333335674  node= 3  to= 2  src= 8  seq= 5.0  flag= 0  copy= 1.0 / 1  bypass= 0 
+S2 >> [TX] t= 49.189333333335696  node= 2  to= 1  src= 6  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S1 >> [TX] t= 49.2693333333357  node= 1  to= 11  src= 4  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [DROP] t= 49.32333333333522  rx= 11  from= 1  src= 4  seq= 5.0  flag= 100  p= 25  cause= RAIN 
+S2 >> [DROP] t= 49.34733333333571  rx= 2  from= 3  src= 8  seq= 5.0  flag= 0  p= 25  cause= RAIN 
+S1 >> [RX] t= 49.42033333333571  rx= 1  from= 2  src= 4  seq= 5.0  flag= 100 
+S1 >> [DUP] t= 49.42033333333571  rx= 1  src= 4  seq= 5.0 
+S1 >> [RX] t= 49.42033333333571  rx= 1  from= 2  src= 5  seq= 5.0  flag= 100 
+S1 >> [FWD] t= 49.42033333333571  node= 1  src= 5  seq= 5.0 
+S1 >> [TX] t= 49.42033333333571  node= 1  to= 11  src= 5  seq= 5.0  flag= 100  copy= 1.0 / 2  bypass= 0 
+S11 >> [GW] t= 49.483333333335224  src= 5  seq= 5.0  flag= 100  val= 44.0  lat= 4.389000000000038 
+S11 >> >>> [GATEWAY - CANH BAO] Phat hien MUA TO tai Node  5  | Do am:  44.0  <<< 
+S1 >> [TX] t= 49.633333333335734  node= 1  to= 11  src= 5  seq= 5.0  flag= 100  copy= 2.0 / 2  bypass= 0 
+S11 >> [DUP] t= 49.703333333335245  rx= 11  src= 5  seq= 5.0 
+Simulation stopped!
+
+End of Simulation.
+7.01 sec
+Time: 49.7833 s
+Number of SENT messages: 282.0 [14548.0 Bytes]
+Number of RECEIVED messages: 282.0 [14548.0  Bytes]
+Number of SENT & RECEIVED messages: 564.0 [29096.0  Bytes]
+Number of ACK messages: 0.0 [0.0  Bytes]
+Number of LOST messages: 0.0 [0.0  Bytes]
+Number of Marked Sensors: 1
+[BATCH_END] active_wall_s=7.015 sim_s=49.783

@@ -1,0 +1,222 @@
+MÔ PHỎNG LORA V3
+Bộ mô phỏng sự kiện Python | LORA_STRESS
+30 seed/cấu hình | sinh gói 1000 s | theo dõi đến 1300 s
+Hạn chạy mỗi kịch bản: 600 s trên máy | Chi tiết: C:\Users\nguye\Desktop\cupcarbon_windows\results_v3\20261120-003100-010879
+
+KB-0 | Trời quang | chạy máy 7.35 s
+  FULL | 30 seed | 0.70 s
+    PDR 66.30% (CI95% 60.21% – 72.28%) | GW/GEN 7411/11308 | nhận trước 1000 s: 7411 | còn chờ: 0
+    Trễ TB 0.217 s (CI95% 0.205 s – 0.229 s) | năng lượng nút lớn nhất 526.29 (CI95% 525.88 – 526.73) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 94.47%  S2 87.80%  S3 60.93%  S4 53.80%  S5 60.93%  S6 50.93%  S7 63.80%  S8 60.87%  S9 66.31%  S10 65.41%
+  FIXED_5 | 30 seed | 2.34 s
+    PDR 68.67% (CI95% 64.00% – 73.33%) | GW/GEN 41200/60000 | nhận trước 1000 s: 41187 | còn chờ: 0
+    Trễ TB 0.210 s (CI95% 0.201 s – 0.220 s) | năng lượng nút lớn nhất 554.46 (CI95% 552.32 – 556.77) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 96.67%  S2 90.00%  S3 66.67%  S4 56.67%  S5 66.67%  S6 56.67%  S7 66.67%  S8 66.63%  S9 60.03%  S10 60.00%
+    Δ PDR so với FULL +2.37 đpt (CI95% -0.94 đpt – +7.04 đpt)
+  FIXED_30 | 30 seed | 0.99 s
+    PDR 69.31% (CI95% 64.65% – 74.00%) | GW/GEN 7070/10200 | nhận trước 1000 s: 7070 | còn chờ: 0
+    Trễ TB 0.212 s (CI95% 0.203 s – 0.221 s) | năng lượng nút lớn nhất 525.92 (CI95% 525.55 – 526.31) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 96.67%  S2 90.00%  S3 66.67%  S4 56.67%  S5 66.67%  S6 56.67%  S7 66.67%  S8 66.57%  S9 66.57%  S10 60.00%
+    Δ PDR so với FULL +3.02 đpt (CI95% +0.02 đpt – +7.54 đpt)
+  NO_REPEAT | 30 seed | 1.02 s
+    PDR 67.85% (CI95% 62.51% – 73.26%) | GW/GEN 7559/11204 | nhận trước 1000 s: 7559 | còn chờ: 0
+    Trễ TB 0.214 s (CI95% 0.204 s – 0.224 s) | năng lượng nút lớn nhất 526.37 (CI95% 525.96 – 526.80) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 94.40%  S2 87.73%  S3 63.80%  S4 56.67%  S5 63.80%  S6 53.80%  S7 66.67%  S8 63.71%  S9 66.31%  S10 62.70%
+    Δ PDR so với FULL +1.55 đpt (CI95% +0.00 đpt – +4.65 đpt)
+
+KB-1 | Mưa 12% | chạy máy 9.46 s
+  FULL | 30 seed | 0.91 s
+    PDR 71.79% (CI95% 66.29% – 76.94%) | GW/GEN 8921/12545 | nhận trước 1000 s: 8921 | còn chờ: 0
+    Trễ TB 0.236 s (CI95% 0.226 s – 0.249 s) | năng lượng nút lớn nhất 528.41 (CI95% 528.02 – 528.80) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 92.08%  S2 86.06%  S3 69.41%  S4 69.77%  S5 71.12%  S6 64.31%  S7 63.30%  S8 66.12%  S9 73.78%  S10 67.93%
+  FIXED_5 | 30 seed | 2.61 s
+    PDR 64.07% (CI95% 60.13% – 68.03%) | GW/GEN 38443/60000 | nhận trước 1000 s: 38430 | còn chờ: 0
+    Trễ TB 0.217 s (CI95% 0.208 s – 0.226 s) | năng lượng nút lớn nhất 554.60 (CI95% 552.74 – 556.51) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 93.65%  S2 85.93%  S3 62.62%  S4 56.90%  S5 64.67%  S6 53.90%  S7 61.57%  S8 58.07%  S9 52.23%  S10 51.18%
+    Δ PDR so với FULL -7.72 đpt (CI95% -12.91 đpt – -1.86 đpt)
+  FIXED_30 | 30 seed | 1.17 s
+    PDR 64.27% (CI95% 60.35% – 68.20%) | GW/GEN 6556/10200 | nhận trước 1000 s: 6556 | còn chờ: 0
+    Trễ TB 0.217 s (CI95% 0.209 s – 0.226 s) | năng lượng nút lớn nhất 525.92 (CI95% 525.61 – 526.23) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 92.84%  S2 85.49%  S3 62.75%  S4 57.16%  S5 63.63%  S6 52.84%  S7 61.27%  S8 57.65%  S9 58.14%  S10 50.98%
+    Δ PDR so với FULL -7.52 đpt (CI95% -12.77 đpt – -1.65 đpt)
+  NO_REPEAT | 30 seed | 1.06 s
+    PDR 72.16% (CI95% 67.11% – 76.71%) | GW/GEN 8900/12387 | nhận trước 1000 s: 8900 | còn chờ: 0
+    Trễ TB 0.216 s (CI95% 0.208 s – 0.224 s) | năng lượng nút lớn nhất 527.62 (CI95% 527.20 – 528.03) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 92.91%  S2 85.46%  S3 74.57%  S4 70.61%  S5 69.74%  S6 66.35%  S7 62.70%  S8 67.09%  S9 71.89%  S10 65.95%
+    Δ PDR so với FULL +0.37 đpt (CI95% -1.30 đpt – +2.70 đpt)
+
+KB-2 | Mưa 25% | chạy máy 7.69 s
+  FULL | 30 seed | 0.85 s
+    PDR 67.29% (CI95% 62.16% – 71.95%) | GW/GEN 8362/12566 | nhận trước 1000 s: 8362 | còn chờ: 0
+    Trễ TB 0.223 s (CI95% 0.216 s – 0.229 s) | năng lượng nút lớn nhất 527.75 (CI95% 527.38 – 528.11) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 93.10%  S2 84.55%  S3 68.50%  S4 61.64%  S5 63.83%  S6 57.83%  S7 56.89%  S8 65.04%  S9 67.75%  S10 61.89%
+  FIXED_5 | 30 seed | 2.56 s
+    PDR 61.09% (CI95% 57.20% – 65.02%) | GW/GEN 36655/60000 | nhận trước 1000 s: 36642 | còn chờ: 0
+    Trễ TB 0.211 s (CI95% 0.203 s – 0.220 s) | năng lượng nút lớn nhất 552.82 (CI95% 551.03 – 554.65) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 91.45%  S2 82.85%  S3 59.97%  S4 52.53%  S5 60.17%  S6 50.20%  S7 57.60%  S8 56.13%  S9 50.20%  S10 49.82%
+    Δ PDR so với FULL -6.20 đpt (CI95% -11.04 đpt – -0.77 đpt)
+  FIXED_30 | 30 seed | 0.80 s
+    PDR 61.59% (CI95% 57.61% – 65.53%) | GW/GEN 6282/10200 | nhận trước 1000 s: 6282 | còn chờ: 0
+    Trễ TB 0.212 s (CI95% 0.204 s – 0.220 s) | năng lượng nút lớn nhất 525.65 (CI95% 525.36 – 525.95) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 90.98%  S2 82.84%  S3 60.39%  S4 52.55%  S5 60.20%  S6 49.02%  S7 59.51%  S8 55.69%  S9 55.49%  S10 49.22%
+    Δ PDR so với FULL -5.70 đpt (CI95% -10.58 đpt – -0.18 đpt)
+  NO_REPEAT | 30 seed | 0.84 s
+    PDR 68.25% (CI95% 64.44% – 72.14%) | GW/GEN 8427/12365 | nhận trước 1000 s: 8427 | còn chờ: 0
+    Trễ TB 0.213 s (CI95% 0.206 s – 0.220 s) | năng lượng nút lớn nhất 527.26 (CI95% 526.90 – 527.62) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 92.07%  S2 84.05%  S3 73.78%  S4 64.69%  S5 63.73%  S6 60.72%  S7 58.22%  S8 65.04%  S9 65.41%  S10 62.07%
+    Δ PDR so với FULL +0.96 đpt (CI95% -0.80 đpt – +3.50 đpt)
+
+KB-3 | Sạt lở chậm | chạy máy 12.74 s
+  FULL | 30 seed | 2.05 s
+    PDR 29.38% (CI95% 27.45% – 31.38%) | GW/GEN 10623/36176 | nhận trước 1000 s: 10618 | còn chờ: 0
+    Trễ TB 0.335 s (CI95% 0.314 s – 0.358 s) | năng lượng nút lớn nhất 540.41 (CI95% 540.10 – 540.73) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 61.06%  S2 34.46%  S3 11.72%  S4 33.00%  S5 30.52%  S6 16.51%  S7 11.40%  S8 10.44%  S9 9.01%  S10 8.74%
+    Cảnh báo ≤30 s: 30/30 (100.00% | Wilson CI95% 88.65% – 100.00%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 29.31% (CI95% 27.89% – 30.60%) | trễ cảnh báo của lượt nhận được 7.106 s (CI95% 5.751 s – 8.781 s)
+  FIXED_5 | 30 seed | 3.00 s
+    PDR 31.11% (CI95% 29.73% – 32.42%) | GW/GEN 18665/60000 | nhận trước 1000 s: 18662 | còn chờ: 0
+    Trễ TB 0.217 s (CI95% 0.206 s – 0.229 s) | năng lượng nút lớn nhất 546.07 (CI95% 545.57 – 546.56) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 81.32%  S2 68.17%  S3 49.03%  S4 42.02%  S5 34.55%  S6 14.65%  S7 10.20%  S8 4.42%  S9 3.65%  S10 3.08%
+    Cảnh báo ≤30 s: 30/30 (100.00% | Wilson CI95% 88.65% – 100.00%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 32.44% (CI95% 30.77% – 33.94%) | trễ cảnh báo của lượt nhận được 4.796 s (CI95% 3.778 s – 5.968 s)
+    Δ PDR so với FULL +1.73 đpt (CI95% -0.41 đpt – +3.82 đpt)
+  FIXED_30 | 30 seed | 0.97 s
+    PDR 31.38% (CI95% 29.77% – 32.82%) | GW/GEN 3201/10200 | nhận trước 1000 s: 3201 | còn chờ: 0
+    Trễ TB 0.215 s (CI95% 0.202 s – 0.229 s) | năng lượng nút lớn nhất 524.65 (CI95% 524.54 – 524.76) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 80.98%  S2 68.82%  S3 52.25%  S4 42.75%  S5 32.84%  S6 14.12%  S7 10.10%  S8 4.80%  S9 4.41%  S10 2.75%
+    Cảnh báo ≤30 s: 16/30 (53.33% | Wilson CI95% 36.14% – 69.77%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 30.75% (CI95% 26.99% – 34.30%) | trễ cảnh báo của lượt nhận được 61.178 s (CI95% 41.270 s – 85.017 s)
+    Δ PDR so với FULL +2.01 đpt (CI95% -0.42 đpt – +4.20 đpt)
+  NO_REPEAT | 30 seed | 1.06 s
+    PDR 18.47% (CI95% 17.57% – 19.52%) | GW/GEN 5033/27129 | nhận trước 1000 s: 5032 | còn chờ: 0
+    Trễ TB 0.140 s (CI95% 0.133 s – 0.147 s) | năng lượng nút lớn nhất 528.58 (CI95% 528.38 – 528.74) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 65.54%  S2 51.69%  S3 12.27%  S4 12.42%  S5 3.16%  S6 14.67%  S7 9.99%  S8 11.68%  S9 9.73%  S10 9.91%
+    Cảnh báo ≤30 s: 20/30 (66.67% | Wilson CI95% 48.78% – 80.77%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 1.15% (CI95% 0.94% – 1.37%) | trễ cảnh báo của lượt nhận được 94.536 s (CI95% 31.152 s – 174.860 s)
+    Δ PDR so với FULL -10.90 đpt (CI95% -12.79 đpt – -9.07 đpt)
+  NO_ESCALATE | 30 seed | 1.69 s
+    PDR 33.29% (CI95% 32.27% – 34.28%) | GW/GEN 6201/18630 | nhận trước 1000 s: 6199 | còn chờ: 0
+    Trễ TB 0.279 s (CI95% 0.270 s – 0.288 s) | năng lượng nút lớn nhất 537.73 (CI95% 537.56 – 537.90) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 84.95%  S2 70.81%  S3 57.57%  S4 44.30%  S5 34.83%  S6 17.00%  S7 11.74%  S8 10.63%  S9 9.37%  S10 8.38%
+    Cảnh báo ≤30 s: 30/30 (100.00% | Wilson CI95% 88.65% – 100.00%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 33.78% (CI95% 32.32% – 35.06%) | trễ cảnh báo của lượt nhận được 6.957 s (CI95% 5.630 s – 8.672 s)
+    Δ PDR so với FULL +3.91 đpt (CI95% +1.61 đpt – +6.04 đpt)
+
+KB-4 | Sạt lở nhanh | chạy máy 10.83 s
+  FULL | 30 seed | 1.50 s
+    PDR 21.52% (CI95% 20.47% – 22.57%) | GW/GEN 6104/28366 | nhận trước 1000 s: 6104 | còn chờ: 0
+    Trễ TB 0.172 s (CI95% 0.165 s – 0.179 s) | năng lượng nút lớn nhất 536.50 (CI95% 536.37 – 536.63) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 54.74%  S2 63.58%  S3 23.64%  S4 15.54%  S5 5.34%  S6 5.37%  S7 5.59%  S8 7.65%  S9 7.03%  S10 6.49%
+    Cảnh báo ≤30 s: 7/30 (23.33% | Wilson CI95% 11.79% – 40.93%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 3.18% (CI95% 2.65% – 3.70%) | trễ cảnh báo của lượt nhận được 149.532 s (CI95% 102.656 s – 207.771 s)
+  FIXED_5 | 30 seed | 2.13 s
+    PDR 24.91% (CI95% 23.22% – 26.41%) | GW/GEN 14948/60000 | nhận trước 1000 s: 14947 | còn chờ: 0
+    Trễ TB 0.128 s (CI95% 0.124 s – 0.135 s) | năng lượng nút lớn nhất 538.05 (CI95% 537.90 – 538.19) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 84.07%  S2 70.45%  S3 54.25%  S4 17.75%  S5 8.28%  S6 3.90%  S7 3.57%  S8 2.60%  S9 2.30%  S10 1.97%
+    Cảnh báo ≤30 s: 7/30 (23.33% | Wilson CI95% 11.79% – 40.93%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 4.10% (CI95% 3.49% – 4.71%) | trễ cảnh báo của lượt nhận được 126.979 s (CI95% 85.697 s – 169.268 s)
+    Δ PDR so với FULL +3.39 đpt (CI95% +1.24 đpt – +5.32 đpt)
+  FIXED_30 | 30 seed | 1.00 s
+    PDR 25.18% (CI95% 23.46% – 26.73%) | GW/GEN 2568/10200 | nhận trước 1000 s: 2568 | còn chờ: 0
+    Trễ TB 0.158 s (CI95% 0.145 s – 0.172 s) | năng lượng nút lớn nhất 524.29 (CI95% 524.17 – 524.44) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 83.04%  S2 71.37%  S3 53.24%  S4 18.73%  S5 7.75%  S6 4.61%  S7 4.71%  S8 2.94%  S9 3.24%  S10 2.16%
+    Cảnh báo ≤30 s: 0/30 (0.00% | Wilson CI95% 0.00% – 11.35%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 3.23% (CI95% 2.04% – 4.52%) | trễ cảnh báo của lượt nhận được 404.331 s (CI95% 294.310 s – 518.112 s)
+    Δ PDR so với FULL +3.65 đpt (CI95% +1.49 đpt – +5.63 đpt)
+  NO_REPEAT | 30 seed | 0.97 s
+    PDR 17.21% (CI95% 15.85% – 18.59%) | GW/GEN 4039/23473 | nhận trước 1000 s: 4039 | còn chờ: 0
+    Trễ TB 0.126 s (CI95% 0.120 s – 0.132 s) | năng lượng nút lớn nhất 526.01 (CI95% 525.92 – 526.10) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 74.65%  S2 64.78%  S3 40.00%  S4 10.09%  S5 2.50%  S6 4.81%  S7 5.23%  S8 7.99%  S9 7.30%  S10 7.03%
+    Cảnh báo ≤30 s: 6/30 (20.00% | Wilson CI95% 9.51% – 37.31%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 0.47% (CI95% 0.31% – 0.65%) | trễ cảnh báo của lượt nhận được 284.143 s (CI95% 158.226 s – 418.129 s)
+    Δ PDR so với FULL -4.32 đpt (CI95% -5.92 đpt – -2.59 đpt)
+  NO_ESCALATE | 30 seed | 1.30 s
+    PDR 19.54% (CI95% 18.48% – 20.46%) | GW/GEN 3641/18630 | nhận trước 1000 s: 3641 | còn chờ: 0
+    Trễ TB 0.184 s (CI95% 0.176 s – 0.194 s) | năng lượng nút lớn nhất 536.53 (CI95% 536.42 – 536.63) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 86.31%  S2 71.89%  S3 60.00%  S4 19.08%  S5 6.11%  S6 5.70%  S7 5.56%  S8 8.02%  S9 7.03%  S10 6.49%
+    Cảnh báo ≤30 s: 8/30 (26.67% | Wilson CI95% 14.18% – 44.45%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 3.98% (CI95% 3.26% – 4.72%) | trễ cảnh báo của lượt nhận được 127.055 s (CI95% 88.302 s – 170.007 s)
+    Δ PDR so với FULL -1.98 đpt (CI95% -3.48 đpt – -0.55 đpt)
+
+KB-5 | S3 hỏng | chạy máy 9.24 s
+  FULL | 30 seed | 0.71 s
+    PDR 67.58% (CI95% 63.41% – 71.68%) | GW/GEN 7201/10705 | nhận trước 1000 s: 7201 | còn chờ: 0
+    Trễ TB 0.185 s (CI95% 0.177 s – 0.194 s) | năng lượng nút lớn nhất 526.08 (CI95% 525.79 – 526.38) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 96.53%  S2 93.15%  S3 66.67%  S4 62.61%  S5 60.21%  S6 49.40%  S7 60.92%  S8 56.54%  S9 61.62%  S10 59.01%
+  FIXED_5 | 30 seed | 2.04 s
+    PDR 65.60% (CI95% 62.09% – 69.12%) | GW/GEN 35776/54540 | nhận trước 1000 s: 35767 | còn chờ: 0
+    Trễ TB 0.184 s (CI95% 0.176 s – 0.191 s) | năng lượng nút lớn nhất 550.36 (CI95% 549.12 – 551.70) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 94.27%  S2 93.63%  S3 66.67%  S4 66.15%  S5 64.13%  S6 50.67%  S7 59.30%  S8 59.38%  S9 53.18%  S10 49.55%
+    Δ PDR so với FULL -1.99 đpt (CI95% -4.36 đpt – +0.65 đpt)
+  FIXED_30 | 30 seed | 0.65 s
+    PDR 67.08% (CI95% 63.65% – 70.54%) | GW/GEN 6218/9270 | nhận trước 1000 s: 6218 | còn chờ: 0
+    Trễ TB 0.187 s (CI95% 0.179 s – 0.195 s) | năng lượng nút lớn nhất 525.32 (CI95% 525.10 – 525.56) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 94.31%  S2 93.53%  S3 66.67%  S4 66.37%  S5 64.02%  S6 51.37%  S7 61.18%  S8 61.47%  S9 60.69%  S10 50.78%
+    Δ PDR so với FULL -0.51 đpt (CI95% -3.18 đpt – +2.55 đpt)
+  NO_REPEAT | 30 seed | 0.70 s
+    PDR 68.57% (CI95% 65.21% – 72.11%) | GW/GEN 7282/10640 | nhận trước 1000 s: 7282 | còn chờ: 0
+    Trễ TB 0.184 s (CI95% 0.176 s – 0.191 s) | năng lượng nút lớn nhất 526.09 (CI95% 525.83 – 526.37) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 96.53%  S2 93.24%  S3 66.67%  S4 63.61%  S5 62.54%  S6 51.91%  S7 63.33%  S8 58.94%  S9 61.80%  S10 56.76%
+    Δ PDR so với FULL +0.98 đpt (CI95% +0.02 đpt – +2.89 đpt)
+  NO_BYPASS | 30 seed | 0.67 s
+    PDR 33.89% (CI95% 32.87% – 34.94%) | GW/GEN 3625/10718 | nhận trước 1000 s: 3625 | còn chờ: 0
+    Trễ TB 0.119 s (CI95% 0.114 s – 0.123 s) | năng lượng nút lớn nhất 525.04 (CI95% 524.73 – 525.35) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 99.33%  S2 97.84%  S3 66.67%  S4 10.56%  S5 12.19%  S6 10.39%  S7 12.45%  S8 12.04%  S9 11.98%  S10 11.17%
+    Δ PDR so với FULL -33.70 đpt (CI95% -36.94 đpt – -30.27 đpt)
+  ORACLE_BYPASS | 30 seed | 0.75 s
+    PDR 69.58% (CI95% 65.20% – 73.91%) | GW/GEN 7179/10382 | nhận trước 1000 s: 7179 | còn chờ: 0
+    Trễ TB 0.191 s (CI95% 0.184 s – 0.199 s) | năng lượng nút lớn nhất 526.01 (CI95% 525.72 – 526.30) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 96.12%  S2 95.13%  S3 66.67%  S4 69.94%  S5 65.53%  S6 51.56%  S7 63.89%  S8 61.50%  S9 64.68%  S10 59.91%
+    Δ PDR so với FULL +2.00 đpt (CI95% -0.23 đpt – +4.22 đpt)
+
+KB-6 | Sạt lở nhanh và S5 hỏng | chạy máy 12.27 s
+  FULL | 30 seed | 1.06 s
+    PDR 30.77% (CI95% 29.15% – 32.32%) | GW/GEN 4992/16167 | nhận trước 1000 s: 4992 | còn chờ: 0
+    Trễ TB 0.139 s (CI95% 0.134 s – 0.145 s) | năng lượng nút lớn nhất 526.10 (CI95% 525.91 – 526.29) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 78.86%  S2 68.98%  S3 47.00%  S4 18.89%  S5 42.70%  S6 5.18%  S7 5.44%  S8 7.65%  S9 7.03%  S10 6.49%
+    Cảnh báo ≤30 s: 5/30 (16.67% | Wilson CI95% 7.34% – 33.56%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 4.72% (CI95% 0.83% – 8.61%) | trễ cảnh báo của lượt nhận được 9.874 s (CI95% 6.509 s – 13.919 s)
+  FIXED_5 | 30 seed | 1.83 s
+    PDR 27.07% (CI95% 25.09% – 28.80%) | GW/GEN 14769/54559 | nhận trước 1000 s: 14768 | còn chờ: 0
+    Trễ TB 0.116 s (CI95% 0.113 s – 0.122 s) | năng lượng nút lớn nhất 535.67 (CI95% 535.13 – 536.13) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 84.42%  S2 70.68%  S3 54.45%  S4 17.83%  S5 49.34%  S6 3.78%  S7 3.52%  S8 2.60%  S9 2.32%  S10 1.95%
+    Cảnh báo ≤30 s: 6/30 (20.00% | Wilson CI95% 9.51% – 37.31%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 5.83% (CI95% 1.67% – 10.83%) | trễ cảnh báo của lượt nhận được 8.803 s (CI95% 4.270 s – 13.089 s)
+    Δ PDR so với FULL -3.70 đpt (CI95% -5.86 đpt – -1.72 đpt)
+  FIXED_30 | 30 seed | 0.81 s
+    PDR 27.46% (CI95% 25.59% – 29.10%) | GW/GEN 2551/9289 | nhận trước 1000 s: 2551 | còn chờ: 1
+    Trễ TB 0.143 s (CI95% 0.133 s – 0.154 s) | năng lượng nút lớn nhất 523.57 (CI95% 523.48 – 523.66) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 83.92%  S2 71.37%  S3 54.22%  S4 18.43%  S5 45.83%  S6 4.41%  S7 4.61%  S8 2.94%  S9 3.24%  S10 2.16%
+    Cảnh báo ≤30 s: 0/30 (0.00% | Wilson CI95% 0.00% – 11.35%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 0.00% (CI95% 0.00% – 0.00%) | trễ cảnh báo của lượt nhận được NA
+    Δ PDR so với FULL -3.31 đpt (CI95% -5.38 đpt – -1.40 đpt)
+  NO_REPEAT | 30 seed | 0.78 s
+    PDR 28.39% (CI95% 27.12% – 29.55%) | GW/GEN 4175/14715 | nhận trước 1000 s: 4175 | còn chờ: 0
+    Trễ TB 0.117 s (CI95% 0.114 s – 0.120 s) | năng lượng nút lớn nhất 523.95 (CI95% 523.77 – 524.11) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 83.81%  S2 73.39%  S3 55.17%  S4 15.51%  S5 38.55%  S6 4.84%  S7 5.21%  S8 7.99%  S9 7.30%  S10 7.03%
+    Cảnh báo ≤30 s: 5/30 (16.67% | Wilson CI95% 7.34% – 33.56%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 4.72% (CI95% 0.83% – 8.61%) | trễ cảnh báo của lượt nhận được 9.799 s (CI95% 6.509 s – 13.693 s)
+    Δ PDR so với FULL -2.38 đpt (CI95% -3.83 đpt – -0.86 đpt)
+  NO_ESCALATE | 30 seed | 0.93 s
+    PDR 26.07% (CI95% 24.52% – 27.43%) | GW/GEN 3439/13189 | nhận trước 1000 s: 3439 | còn chờ: 0
+    Trễ TB 0.158 s (CI95% 0.150 s – 0.167 s) | năng lượng nút lớn nhất 525.68 (CI95% 525.53 – 525.84) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 86.22%  S2 71.98%  S3 60.45%  S4 19.61%  S5 43.30%  S6 5.51%  S7 5.56%  S8 8.02%  S9 7.03%  S10 6.49%
+    Cảnh báo ≤30 s: 6/30 (20.00% | Wilson CI95% 9.51% – 37.31%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 6.39% (CI95% 1.94% – 11.39%) | trễ cảnh báo của lượt nhận được 10.533 s (CI95% 7.221 s – 13.903 s)
+    Δ PDR so với FULL -4.69 đpt (CI95% -6.42 đpt – -3.08 đpt)
+  NO_BYPASS | 30 seed | 0.91 s
+    PDR 31.51% (CI95% 30.17% – 32.61%) | GW/GEN 5093/16153 | nhận trước 1000 s: 5093 | còn chờ: 0
+    Trễ TB 0.139 s (CI95% 0.135 s – 0.144 s) | năng lượng nút lớn nhất 525.87 (CI95% 525.69 – 526.07) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 79.65%  S2 71.25%  S3 48.12%  S4 19.59%  S5 42.70%  S6 4.94%  S7 5.51%  S8 7.76%  S9 7.03%  S10 6.49%
+    Cảnh báo ≤30 s: 5/30 (16.67% | Wilson CI95% 7.34% – 33.56%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 4.72% (CI95% 0.83% – 8.61%) | trễ cảnh báo của lượt nhận được 9.874 s (CI95% 6.509 s – 13.919 s)
+    Δ PDR so với FULL +0.74 đpt (CI95% -0.48 đpt – +2.08 đpt)
+  ORACLE_BYPASS | 30 seed | 0.96 s
+    PDR 31.35% (CI95% 29.85% – 32.70%) | GW/GEN 4953/15763 | nhận trước 1000 s: 4953 | còn chờ: 0
+    Trễ TB 0.143 s (CI95% 0.138 s – 0.147 s) | năng lượng nút lớn nhất 526.09 (CI95% 525.90 – 526.26) giây TX tương đương (rho=0,4)
+    PDR nguồn S1 83.14%  S2 70.54%  S3 55.04%  S4 19.12%  S5 42.70%  S6 6.06%  S7 5.69%  S8 7.65%  S9 7.03%  S10 6.49%
+    Cảnh báo ≤30 s: 5/30 (16.67% | Wilson CI95% 7.34% – 33.56%) | CHƯA CHỨNG MINH ĐẠT
+    PDR gói 255 4.72% (CI95% 0.83% – 8.61%) | trễ cảnh báo của lượt nhận được 9.874 s (CI95% 6.509 s – 13.919 s)
+    Δ PDR so với FULL +0.58 đpt (CI95% -0.33 đpt – +1.54 đpt)
+
+Tổng thời gian chạy máy: 69.58 s

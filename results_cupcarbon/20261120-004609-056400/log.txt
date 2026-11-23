@@ -1,0 +1,28 @@
+CUPCARBON KLAINES | batch 20261120-004609-056400
+Requested active duration per scenario: 8 wall-clock s
+Engine pacing: 40 ms per simulated s (nominal). Use the measured simulated horizon in each result.
+Model: CupCarbon engine + existing SenScript project, legacy packet loss, no ACK, MAC disabled, pre-announced bypass disabled.
+One run per scenario. No controlled seed, confidence interval or V3 PHY/energy claim.
+Detailed logs: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-004609-056400
+cupcarbon.jar SHA-256: 1eccbf29827ad321a380f9472e6bccee05d1a71a86cb0f24947d7f31546a0a27
+
+KB-6 | Sat lo nhanh va S5 hong | START 2026-11-20T00:46:10
+Engine log: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-004609-056400\KB-6\cupcarbon.log
+Active runtime: 8.011 wall-clock s | simulated horizon: 2868.562 s
+PDR 31.34% (414/1321)
+Mean latency from GEN: 10.083 simulated s (received packets only)
+  S1: 116/116 (100.00%)
+  S2: 105/118 (88.98%)
+  S3: 104/142 (73.24%)
+  S4: 55/200 (27.50%)
+  S5: 6/9 (66.67%)
+  S6: 6/236 (2.54%)
+  S7: 6/198 (3.03%)
+  S8: 5/107 (4.67%)
+  S9: 6/97 (6.19%)
+  S10: 5/98 (5.10%)
+Alert packets: 0/3 (FLAG 255 from S5)
+First alert from event onset: none | within 30 s: NO
+Events: GEN=1337, GW=419, DROP=1411, FAIL=1, DETECT=16, REPAIR_TX=16, BYPASS_ON=3, REVERT=59, CONFIRM=26
+
+Finished 2026-11-20T00:46:20 | failed scenarios: 0

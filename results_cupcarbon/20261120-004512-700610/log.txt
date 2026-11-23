@@ -1,0 +1,13 @@
+CUPCARBON KLAINES | batch 20261120-004512-700610
+Requested active duration per scenario: 8 wall-clock s
+Engine pacing: 40 ms per simulated s (nominal). Use the measured simulated horizon in each result.
+Model: CupCarbon engine + existing SenScript project, legacy packet loss, no ACK, MAC disabled, pre-announced bypass disabled.
+One run per scenario. No controlled seed, confidence interval or V3 PHY/energy claim.
+Detailed logs: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-004512-700610
+cupcarbon.jar SHA-256: 1eccbf29827ad321a380f9472e6bccee05d1a71a86cb0f24947d7f31546a0a27
+
+KB-6 | Sat lo nhanh va S5 hong | START 2026-11-20T00:45:14
+Engine log: C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-004512-700610\KB-6\cupcarbon.log
+ERROR: Command '['C:\\Program Files\\Java\\jdk-24\\bin\\java.exe', '-Dfile.encoding=UTF-8', '-Djava.io.tmpdir=.', '-Duser.home=.', '-cp', 'C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\cupcarbon_runtime\\cupcarbon.jar;C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\results_cupcarbon\\20261120-004512-700610\\classes', 'CupCarbonBatch', 'C:\\Users\\nguye\\Desktop\\cupcarbon_windows\\results_cupcarbon\\20261120-004512-700610\\KB-6\\landslide_lora', '8', '40']' returned non-zero exit status 1.. See C:\Users\nguye\Desktop\cupcarbon_windows\results_cupcarbon\20261120-004512-700610\KB-6\cupcarbon.log
+
+Finished 2026-11-20T00:45:19 | failed scenarios: 1
