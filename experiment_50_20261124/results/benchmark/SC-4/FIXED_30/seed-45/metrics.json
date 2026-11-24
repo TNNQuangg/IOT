@@ -1,0 +1,922 @@
+{
+  "seed": 45,
+  "network": {
+    "gen": 340,
+    "received": 43,
+    "before_cutoff": 43,
+    "pending": 0,
+    "pdr": 0.1264705882352941,
+    "latency": 0.1720332498119024,
+    "p50": 0.0412160000000199,
+    "p95": 0.6473509122564209
+  },
+  "alarm": {
+    "gen": 31,
+    "received": 2,
+    "before_cutoff": 2,
+    "pending": 0,
+    "pdr": 0.06451612903225806,
+    "latency": 0.5390499131293183,
+    "p50": 0.2060799999999574,
+    "p95": 0.8720198262586791
+  },
+  "alarm_delay": 109.64413896864542,
+  "alarm_on_time": false,
+  "radio": {
+    "1": {
+      "tx": 4.286463999998815,
+      "rx": 1295.713536000001,
+      "off": 0,
+      "duty_cycle": 0.0032972799999990885,
+      "energy": {
+        "0.2": 263.4291711999991,
+        "0.4": 522.5718783999993,
+        "0.8": 1040.8572927999999
+      }
+    },
+    "2": {
+      "tx": 5.811455999997854,
+      "rx": 1294.1885440000021,
+      "off": 0,
+      "duty_cycle": 0.0044703507692291184,
+      "energy": {
+        "0.2": 264.6491647999983,
+        "0.4": 523.4868735999987,
+        "0.8": 1041.1622911999996
+      }
+    },
+    "3": {
+      "tx": 4.657407999999023,
+      "rx": 1295.3425920000009,
+      "off": 0,
+      "duty_cycle": 0.003582621538460787,
+      "energy": {
+        "0.2": 263.7259263999992,
+        "0.4": 522.7944447999994,
+        "0.8": 1040.9314815999999
+      }
+    },
+    "4": {
+      "tx": 6.182399999998422,
+      "rx": 1293.8176000000017,
+      "off": 0,
+      "duty_cycle": 0.004755692307691094,
+      "energy": {
+        "0.2": 264.9459199999988,
+        "0.4": 523.7094399999992,
+        "0.8": 1041.2364799999998
+      }
+    },
+    "5": {
+      "tx": 6.388479999997697,
+      "rx": 1293.6115200000022,
+      "off": 0,
+      "duty_cycle": 0.004914215384613613,
+      "energy": {
+        "0.2": 265.11078399999815,
+        "0.4": 523.8330879999986,
+        "0.8": 1041.2776959999997
+      }
+    },
+    "6": {
+      "tx": 5.440511999998965,
+      "rx": 1294.559488000001,
+      "off": 0,
+      "duty_cycle": 0.004185009230768435,
+      "energy": {
+        "0.2": 264.3524095999992,
+        "0.4": 523.2643071999994,
+        "0.8": 1041.0881023999998
+      }
+    },
+    "7": {
+      "tx": 4.492543999998863,
+      "rx": 1295.5074560000012,
+      "off": 0,
+      "duty_cycle": 0.003455803076922202,
+      "energy": {
+        "0.2": 263.5940351999991,
+        "0.4": 522.6955263999993,
+        "0.8": 1040.8985087999997
+      }
+    },
+    "8": {
+      "tx": 3.4621439999989265,
+      "rx": 1296.537856000001,
+      "off": 0,
+      "duty_cycle": 0.0026631876923068664,
+      "energy": {
+        "0.2": 262.76971519999915,
+        "0.4": 522.0772863999994,
+        "0.8": 1040.6924287999998
+      }
+    },
+    "9": {
+      "tx": 2.761471999999084,
+      "rx": 1297.238528000001,
+      "off": 0,
+      "duty_cycle": 0.0021242092307685264,
+      "energy": {
+        "0.2": 262.2091775999993,
+        "0.4": 521.6568831999996,
+        "0.8": 1040.5522944
+      }
+    },
+    "10": {
+      "tx": 1.4013439999995625,
+      "rx": 1298.5986560000003,
+      "off": 0,
+      "duty_cycle": 0.0010779569230765864,
+      "energy": {
+        "0.2": 261.1210751999996,
+        "0.4": 520.8408063999997,
+        "0.8": 1040.2802688
+      }
+    },
+    "11": {
+      "tx": 0,
+      "rx": 1300,
+      "off": 0,
+      "duty_cycle": 0.0,
+      "energy": {
+        "0.2": 260.0,
+        "0.4": 520.0,
+        "0.8": 1040.0
+      }
+    }
+  },
+  "drops": {
+    "HALF_DUPLEX": 123,
+    "COLLISION": 164,
+    "CHANNEL": 460
+  },
+  "nodes": {
+    "1": {
+      "gen": 34,
+      "received": 28,
+      "before_cutoff": 28,
+      "pending": 0,
+      "pdr": 0.8235294117647058,
+      "latency": 0.057906933790662966,
+      "p50": 0.04121599999996306,
+      "p95": 0.0412160000000199
+    },
+    "2": {
+      "gen": 34,
+      "received": 2,
+      "before_cutoff": 2,
+      "pending": 0,
+      "pdr": 0.058823529411764705,
+      "latency": 0.19457544882454414,
+      "p50": 0.0824320000000398,
+      "p95": 0.30671889764904847
+    },
+    "3": {
+      "gen": 34,
+      "received": 0,
+      "before_cutoff": 0,
+      "pending": 0,
+      "pdr": 0.0,
+      "latency": null,
+      "p50": null,
+      "p95": null
+    },
+    "4": {
+      "gen": 34,
+      "received": 6,
+      "before_cutoff": 6,
+      "pending": 0,
+      "pdr": 0.17647058823529413,
+      "latency": 0.37671959077863953,
+      "p50": 0.16486399999999968,
+      "p95": 1.0839792300777162
+    },
+    "5": {
+      "gen": 34,
+      "received": 4,
+      "before_cutoff": 4,
+      "pending": 0,
+      "pdr": 0.11764705882352941,
+      "latency": 0.37256495656465727,
+      "p50": 0.20607999999999294,
+      "p95": 0.8720198262586791
+    },
+    "6": {
+      "gen": 34,
+      "received": 1,
+      "before_cutoff": 1,
+      "pending": 0,
+      "pdr": 0.029411764705882353,
+      "latency": 0.6180124149372617,
+      "p50": 0.6180124149372617,
+      "p95": 0.6180124149372617
+    },
+    "7": {
+      "gen": 34,
+      "received": 1,
+      "before_cutoff": 1,
+      "pending": 0,
+      "pdr": 0.029411764705882353,
+      "latency": 0.6473509122564209,
+      "p50": 0.6473509122564209,
+      "p95": 0.6473509122564209
+    },
+    "8": {
+      "gen": 34,
+      "received": 0,
+      "before_cutoff": 0,
+      "pending": 0,
+      "pdr": 0.0,
+      "latency": null,
+      "p50": null,
+      "p95": null
+    },
+    "9": {
+      "gen": 34,
+      "received": 1,
+      "before_cutoff": 1,
+      "pending": 0,
+      "pdr": 0.029411764705882353,
+      "latency": 0.37094400000000327,
+      "p50": 0.37094400000000327,
+      "p95": 0.37094400000000327
+    },
+    "10": {
+      "gen": 34,
+      "received": 0,
+      "before_cutoff": 0,
+      "pending": 0,
+      "pdr": 0.0,
+      "latency": null,
+      "p50": null,
+      "p95": null
+    }
+  },
+  "flags": {
+    "0": {
+      "gen": 208,
+      "received": 33,
+      "before_cutoff": 33,
+      "pending": 0,
+      "pdr": 0.15865384615384615,
+      "latency": 0.08340706193295921,
+      "p50": 0.04121599999999148,
+      "p95": 0.37094400000000327
+    },
+    "100": {
+      "gen": 101,
+      "received": 8,
+      "before_cutoff": 8,
+      "pending": 0,
+      "pdr": 0.07920792079207921,
+      "latency": 0.4458621089831891,
+      "p50": 0.20607999999999294,
+      "p95": 1.0839792300777162
+    },
+    "255": {
+      "gen": 31,
+      "received": 2,
+      "before_cutoff": 2,
+      "pending": 0,
+      "pdr": 0.06451612903225806,
+      "latency": 0.5390499131293183,
+      "p50": 0.2060799999999574,
+      "p95": 0.8720198262586791
+    }
+  },
+  "routes": [
+    {
+      "event": "DETECT",
+      "t": 151,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 151,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "DETECT",
+      "t": 154,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 154,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "REVERT",
+      "t": 154.2350030047771,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "DETECT",
+      "t": 155,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 155,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 156,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 160,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 161,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 165,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REVERT",
+      "t": 181.07030575286856,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REVERT",
+      "t": 210.37782484552025,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "DETECT",
+      "t": 272,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 272,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "DETECT",
+      "t": 273,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 273,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 277,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 278,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 282,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 283,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "DETECT",
+      "t": 301,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 301,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 306,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 311,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REVERT",
+      "t": 330.5980180708768,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "DETECT",
+      "t": 332,
+      "node": 1,
+      "child": 2
+    },
+    {
+      "event": "DETECT",
+      "t": 332,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "DETECT",
+      "t": 332,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 332,
+      "node": 1,
+      "child": 2
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 332,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 332,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REVERT",
+      "t": 332.2124720822123,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REVERT",
+      "t": 332.4792749686455,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "BYPASS_ON",
+      "t": 332.9081477092212,
+      "node": 3,
+      "to": 1
+    },
+    {
+      "event": "REVERT",
+      "t": 334.06120171942183,
+      "node": 1,
+      "child": 2
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 337,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 342,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REVERT",
+      "t": 361.0047898175327,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "UNREACHABLE",
+      "t": 372,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "DETECT",
+      "t": 421,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 421,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 426,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 431,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "DETECT",
+      "t": 452,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "DETECT",
+      "t": 452,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 452,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 452,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REVERT",
+      "t": 452.2507202197657,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "BYPASS_ON",
+      "t": 453.2924948576206,
+      "node": 5,
+      "to": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 457,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 462,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "UNREACHABLE",
+      "t": 521,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "DETECT",
+      "t": 543,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "DETECT",
+      "t": 543,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 543,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 543,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 548,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 548,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "UNREACHABLE",
+      "t": 552,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 553,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 553,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "CONFIRM",
+      "t": 572.4792749686454,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REVERT",
+      "t": 572.5204909686454,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "UNREACHABLE",
+      "t": 643,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "DETECT",
+      "t": 663,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 663,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 668,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 673,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REVERT",
+      "t": 720.5993897569085,
+      "node": 6,
+      "child": 7
+    },
+    {
+      "event": "REVERT",
+      "t": 721.0703057528685,
+      "node": 7,
+      "child": 8
+    },
+    {
+      "event": "REVERT",
+      "t": 752.5204909686454,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REVERT",
+      "t": 781.0047898175327,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REVERT",
+      "t": 902.4792749686454,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "DETECT",
+      "t": 904,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 904,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 909,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 914,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "DETECT",
+      "t": 992,
+      "node": 1,
+      "child": 2
+    },
+    {
+      "event": "DETECT",
+      "t": 992,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "DETECT",
+      "t": 992,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 992,
+      "node": 1,
+      "child": 2
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 992,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 992,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REVERT",
+      "t": 992.2920476633674,
+      "node": 2,
+      "child": 3
+    },
+    {
+      "event": "REVERT",
+      "t": 994.1316635058301,
+      "node": 1,
+      "child": 2
+    },
+    {
+      "event": "DETECT",
+      "t": 995,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 995,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "REVERT",
+      "t": 995.041216,
+      "node": 3,
+      "child": 4
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 1000,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "UNREACHABLE",
+      "t": 1004,
+      "node": 5,
+      "child": 6
+    },
+    {
+      "event": "REPAIR_TX",
+      "t": 1005,
+      "node": 4,
+      "child": 5
+    },
+    {
+      "event": "UNREACHABLE",
+      "t": 1095,
+      "node": 4,
+      "child": 5
+    }
+  ],
+  "links": {
+    "10-9": {
+      "tx": 34,
+      "rx": 33
+    },
+    "9-8": {
+      "tx": 67,
+      "rx": 50
+    },
+    "8-7": {
+      "tx": 84,
+      "rx": 12
+    },
+    "7-6": {
+      "tx": 85,
+      "rx": 13
+    },
+    "4-3": {
+      "tx": 117,
+      "rx": 22
+    },
+    "3-2": {
+      "tx": 83,
+      "rx": 35
+    },
+    "2-1": {
+      "tx": 99,
+      "rx": 43
+    },
+    "1-11": {
+      "tx": 92,
+      "rx": 68
+    },
+    "6-5": {
+      "tx": 96,
+      "rx": 24
+    },
+    "5-4": {
+      "tx": 100,
+      "rx": 28
+    },
+    "6-8": {
+      "tx": 36,
+      "rx": 0
+    },
+    "5-7": {
+      "tx": 15,
+      "rx": 0
+    },
+    "7-9": {
+      "tx": 24,
+      "rx": 0
+    },
+    "4-6": {
+      "tx": 33,
+      "rx": 2
+    },
+    "3-5": {
+      "tx": 30,
+      "rx": 4
+    },
+    "1-3": {
+      "tx": 12,
+      "rx": 5
+    },
+    "2-4": {
+      "tx": 42,
+      "rx": 0
+    },
+    "5-3": {
+      "tx": 40,
+      "rx": 3
+    }
+  },
+  "wall_seconds": 0.0320666000188794
+}

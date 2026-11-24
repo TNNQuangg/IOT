@@ -1,0 +1,30 @@
+{
+  "scenario": 6,
+  "seed": 42,
+  "config": {
+    "name": "NO_BYPASS",
+    "profile": "LORA_STRESS",
+    "fixed": 0,
+    "alarm_copies": 3,
+    "repeat": true,
+    "escalate": true,
+    "bypass": false,
+    "detect": true,
+    "oracle": false,
+    "l0": 5,
+    "silence": 90,
+    "jitter": [
+      0.1,
+      0.4
+    ],
+    "tau": 1,
+    "interference": 120
+  },
+  "model_sha256": "c6ed4708e7985de9a603450bc0bda56b20ebd1ddc3862cb4c8a3a667b6a907b5",
+  "runner_sha256": "75d92b118b42e90b2f95d3ce2fdbb9f65ebd0b5028b19cdfc65e47abc04d8026",
+  "frequency_mhz": 920,
+  "frequency_role": "metadata only",
+  "airtime": 0.041215999999999996,
+  "activity_end": 1000,
+  "simulation_end": 1300
+}

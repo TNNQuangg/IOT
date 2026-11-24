@@ -1,0 +1,39 @@
+note: Running TeX ...
+Fontconfig error: Cannot load default config file: No such file: (null)
+note: downloading fontspec.sty
+note: downloading xparse.sty
+note: downloading expl3.sty
+note: downloading fontspec-xetex.sty
+note: downloading fontspec.cfg
+note: downloading lmroman10-bold.otf
+warning: accessing absolute path `C:/WINDOWS/fonts\timesi.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\timesbd.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\times.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\timesbi.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\arialbd.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\ARIALN.TTF`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\ARIALNI.TTF`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\ariblk.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\arialbi.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\ARIALNBI.TTF`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\ariali.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\arial.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\ARIALNB.TTF`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\courbd.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\cour.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\couri.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `C:/WINDOWS/fonts\courbi.ttf`; build may not be reproducible in other environments
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: main.tex:122: Underfull \hbox (badness 1874) in paragraph at lines 122--122
+warning: main.tex:502: Underfull \hbox (badness 3965) in paragraph at lines 501--502
+note: Rerunning TeX because "main.aux" changed ...
+warning: algorithm.sty:11: 
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+warning: main.tex:122: Underfull \hbox (badness 1874) in paragraph at lines 122--122
+warning: main.tex:502: Underfull \hbox (badness 3965) in paragraph at lines 501--502
+note: Running xdvipdfmx ...
+warning: warnings were issued by the TeX engine; use --print and/or --keep-logs for details.
+note: Writing `output\paper_50seeds_20261124\main.log` (20.533203125 KiB)
+note: Writing `output\paper_50seeds_20261124\main.pdf` (9.300323486328125 MiB)
+note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)

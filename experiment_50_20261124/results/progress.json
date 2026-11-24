@@ -1,0 +1,9 @@
+{
+  "completed": 2450,
+  "total": 2450,
+  "regression_matched": 1225,
+  "scenario": 6,
+  "config": "BASE_30",
+  "wall_seconds": 131.2674030000053,
+  "group_seconds": 0.6487156999937724
+}

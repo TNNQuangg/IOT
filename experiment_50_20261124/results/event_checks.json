@@ -1,0 +1,34 @@
+{
+  "out_of_order_dedup": true,
+  "half_duplex": true,
+  "channel_common_times": true,
+  "receive_independent_of_sampling": true,
+  "bypass_delivery_example": {
+    "link": {
+      "event": "RX_OK",
+      "t": 205.149437142,
+      "node": 2,
+      "source": 4,
+      "to": 2,
+      "copy_id": "6:11:4:1",
+      "ttx": 205.1082211420946,
+      "src": 6,
+      "seq": 11,
+      "flag": 0,
+      "tgen": 205.02578914209462,
+      "event_id": null
+    },
+    "gateway": {
+      "event": "GW",
+      "t": 205.231869142,
+      "node": 11,
+      "lat": 0.2060799999999574,
+      "copy_id": "6:11:1:1",
+      "src": 6,
+      "seq": 11,
+      "flag": 0,
+      "tgen": 205.02578914209462,
+      "event_id": null
+    }
+  }
+}
